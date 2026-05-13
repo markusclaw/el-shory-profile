@@ -3,425 +3,482 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL SHORY - Material Acquisition Specialist</title>
+    <title>WANTED: EL SHORY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @font-face {
+            font-family: 'GTA';
+            src: url('data:font/woff2;base64,d09GMgABAAAAACHYAA0AAAAACJQAAAGDAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGmRQcEgqH4dSATYCJAoUCAqEYAuDZAQgMBBICSYPAAE2AiMFEARVBcv//AAAA==');
         }
         
         body {
-            font-family: "Comic Sans MS", "Papyrus", cursive;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF6347 100%);
-            color: #333;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            color: #FFDD00;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
             padding: 20px;
         }
         
-        .container {
-            max-width: 800px;
+        .gta-container {
+            max-width: 900px;
             margin: 0 auto;
-            background: #FFFFCC;
-            border: 5px dashed #FF1493;
-            padding: 30px;
-            box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+            background: #1a1a1a;
+            border: 8px solid #FFDD00;
+            box-shadow: 0 0 40px rgba(255, 221, 0, 0.3), inset 0 0 20px rgba(0,0,0,0.8);
             position: relative;
         }
         
-        .container::before {
-            content: "⚠️";
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            font-size: 40px;
-            transform: rotate(-15deg);
-        }
-        
-        .container::after {
-            content: "⚠️";
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            font-size: 40px;
-            transform: rotate(15deg);
-        }
-        
-        h1 {
+        .wanted-banner {
+            background: #FFDD00;
+            color: #1a1a1a;
+            padding: 20px;
             text-align: center;
-            color: #FF1493;
-            font-size: 48px;
-            text-shadow: 3px 3px 0px #00CED1;
-            margin-bottom: 10px;
-            animation: blink 1s infinite;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #DC143C;
-            font-size: 14px;
-            font-style: italic;
-            margin-bottom: 30px;
-            background: #FFB6C1;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        
-        .warning {
-            background: #FF6347;
-            color: white;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #DC143C;
-            font-weight: bold;
+            border-bottom: 6px solid #1a1a1a;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: 4px;
             text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wanted-banner::before,
+        .wanted-banner::after {
+            content: "★";
+            position: absolute;
+            font-size: 36px;
+            color: #1a1a1a;
+        }
+        
+        .wanted-banner::before {
+            left: 20px;
+        }
+        
+        .wanted-banner::after {
+            right: 20px;
+        }
+        
+        .crime-level {
+            background: #1a1a1a;
+            border-bottom: 4px solid #FFDD00;
+            padding: 15px 20px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
             letter-spacing: 2px;
+            color: #FF3333;
         }
         
-        section {
-            margin: 25px 0;
-            padding: 15px;
-            background: white;
-            border: 3px solid #FF1493;
-            border-radius: 10px;
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: #1a1a1a;
         }
         
-        h2 {
-            color: #FF1493;
-            font-size: 28px;
+        .mugshot {
+            background: #222;
+            border-right: 4px solid #FFDD00;
+            border-bottom: 4px solid #FFDD00;
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+        
+        .mugshot-placeholder {
+            width: 100%;
+            max-width: 280px;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, #333 0%, #111 100%);
+            border: 4px solid #FFDD00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
             margin-bottom: 15px;
-            text-decoration: underline wavy;
         }
         
-        h3 {
-            color: #00CED1;
+        .mugshot-text {
+            font-family: 'Courier New', monospace;
+            color: #FFDD00;
+            font-size: 12px;
+            letter-spacing: 1px;
+            line-height: 1.8;
             margin-top: 15px;
+        }
+        
+        .dossier {
+            padding: 30px;
+            background: #1a1a1a;
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 2px solid #333;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            color: #FFDD00;
+            font-weight: bold;
+        }
+        
+        .stat-value {
+            color: #FFDD00;
+            text-align: right;
+        }
+        
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: #FFDD00;
+            background: #222;
+            padding: 15px 20px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-left: 6px solid #FFDD00;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+        
+        .content-block {
+            background: #222;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 2px solid #FFDD00;
+            color: #DDD;
+        }
+        
+        .content-block h3 {
+            color: #FFDD00;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .content-block p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .content-block ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .content-block li {
             margin-bottom: 8px;
         }
         
-        .data-field {
-            margin: 12px 0;
-            padding: 10px;
-            background: #F0FFFF;
-            border-left: 4px solid #FFA500;
-        }
-        
-        .label {
-            font-weight: bold;
-            color: #FF1493;
-        }
-        
-        ul, ol {
-            margin-left: 30px;
-            margin-top: 10px;
-        }
-        
-        li {
-            margin: 8px 0;
-        }
-        
-        .quote {
-            background: #FFE4B5;
-            padding: 20px;
+        .quote-block {
+            background: #111;
+            border-left: 6px solid #FF3333;
+            padding: 15px 20px;
             margin: 15px 0;
-            border-left: 5px solid #FF8C00;
+            color: #FFDD00;
             font-style: italic;
-            color: #8B4513;
-            font-size: 14px;
+            font-family: 'Courier New', monospace;
         }
         
-        .van {
-            background: #DCDCDC;
-            padding: 15px;
+        .aliases {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             margin: 15px 0;
-            text-align: center;
-            border: 3px dotted #666;
-            font-family: monospace;
         }
         
-        .rumor {
-            background: #E6E6FA;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border-left: 4px solid #9932CC;
+        .alias-tag {
+            background: #FF3333;
+            color: #1a1a1a;
+            padding: 8px 15px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        
+        .warning-bar {
+            background: #FF3333;
+            color: #1a1a1a;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 900;
+            text-align: center;
         }
         
         .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 3px dashed #FF1493;
-            color: #666;
-            font-size: 12px;
-        }
-        
-        .badge {
-            display: inline-block;
-            background: #FFD700;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 20px;
-            font-weight: bold;
-            border: 2px solid #FFA500;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.7; }
-        }
-        
-        .disclaimer {
-            background: #FF6347;
-            color: white;
+            background: #111;
+            border-top: 4px solid #FFDD00;
             padding: 20px;
-            margin: 20px 0;
             text-align: center;
-            font-weight: bold;
-            border: 3px solid #DC143C;
-            transform: rotate(-2deg);
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            color: #999;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 800px) {
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mugshot {
+                border-right: none;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🔧 EL SHORY 🔧</h1>
-        <p class="subtitle">Material Acquisition Specialist | Independent Consultant | Unreliable Narrator</p>
+    <div class="gta-container">
+        <!-- WANTED BANNER -->
+        <div class="wanted-banner">WANTED</div>
         
-        <div class="warning">
-            ⚠️ PROFILE DATA UNETHICALLY AND IMMORALLY OBTAINED FROM QUESTIONABLE PUBLIC SOURCES ⚠️
+        <!-- CRIME LEVEL -->
+        <div class="crime-level">⚠️ EXTREME DANGER ⚠️</div>
+        
+        <!-- MAIN PROFILE -->
+        <div class="profile-grid">
+            <!-- MUGSHOT SECTION -->
+            <div class="mugshot">
+                <div class="mugshot-placeholder">🔧</div>
+                <div class="mugshot-text">
+                    FULL NAME:<br>
+                    JORGE SHORTINEZ<br>
+                    HERNÁNDEZ-REYES<br>
+                    <br>
+                    ALIAS:<br>
+                    "EL SHORY"
+                </div>
+            </div>
+            
+            <!-- DOSSIER SECTION -->
+            <div class="dossier">
+                <div class="stat-row">
+                    <span class="stat-label">AGE:</span>
+                    <span class="stat-value">34-57 (UNKNOWN)</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">LOCATION:</span>
+                    <span class="stat-value">BORDER REGION</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">THREAT LEVEL:</span>
+                    <span class="stat-value">★★★★★</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">LAST SEEN:</span>
+                    <span class="stat-value">WHITE VAN, NO PLATES</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">STATUS:</span>
+                    <span class="stat-value">AT LARGE</span>
+                </div>
+            </div>
         </div>
-
-        <section>
-            <h2>FULL IDENTITY</h2>
-            <div class="data-field">
-                <span class="label">Legal Name:</span> Jorge "El Shory" Shortinez Hernández-Reyes
-            </div>
-            <div class="data-field">
-                <span class="label">Note:</span> Nobody knows if "Shortinez" is a real <em>apellido</em> or a nickname that became legal after a clerical error in 1994.
-            </div>
-        </section>
-
-        <section>
-            <h2>ALIASES & TITLES</h2>
-            <ul>
-                <li><span class="badge">El Shory</span></li>
-                <li><span class="badge">El Pecas' Associate</span></li>
-                <li><span class="badge">The Mercury Survivor</span></li>
-                <li><span class="badge">The Public Source Specialist</span></li>
-                <li><span class="badge">"Sin Placas"</span></li>
-                <li><span class="badge">El de la Van Blanca</span></li>
-                <li><span class="badge">Slave Dongle Procurement Manager</span></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>VITAL STATISTICS</h2>
-            <div class="data-field">
-                <span class="label">Age:</span> Somewhere between 34 and 57. Depends on lighting, humidity, and whether he recently escaped a scrapyard argument.
-            </div>
-            <div class="data-field">
-                <span class="label">Height/Weight:</span> Unconfirmed.
-            </div>
-        </section>
-
-        <section>
-            <h2>PHYSICAL DESCRIPTION</h2>
-            <ul>
-                <li>Limp on the left leg "from baseball"</li>
-                <li>Left hand permanently semi-closed from "the factory accident"</li>
-                <li>Smells faintly of WD-40, carne asada smoke, and mystery solvents</li>
-                <li><strong>Always wears:</strong>
-                    <ul>
-                        <li>Sleeveless shirts</li>
-                        <li>Faded jeans</li>
-                        <li>Boots with uneven soles</li>
-                    </ul>
-                </li>
-                <li>Speaks with the raspy voice of a man who smoked for 40 years… but allegedly never smoked once in his life</li>
-            </ul>
-            <div class="quote">
-                "Es daño de segunda mano."
-            </div>
-        </section>
-
-        <section>
-            <h2>ORIGIN STORY: MERCURY MONDAY</h2>
-            <p>Jorge "El Shory" grew up in an unnamed industrial border town where rumors traveled faster than electricity and every third warehouse was either abandoned or "temporarily under investigation."</p>
-            
-            <p>At age 14, Shory obtained his first job at a chemical processing plant whose slogan was:</p>
-            <div class="warning">SAFETY THIRD</div>
-            
-            <p><strong>Three weeks later came The Incident of '87 — also known locally as: MERCURY MONDAY</strong></p>
-            
-            <div class="rumor">
-                <strong>Official records:</strong> "A minor industrial ventilation irregularity."
-            </div>
-            <div class="rumor">
-                <strong>Residents:</strong> "The day the pigeons forgot how to fly."
+        
+        <!-- CRIMES SECTION -->
+        <div style="padding: 0 30px;">
+            <div class="section-title">KNOWN CRIMES</div>
+            <div class="content-block">
+                <h3>PRIMARY OFFENSES:</h3>
+                <ul>
+                    <li>Unauthorized material acquisition</li>
+                    <li>Public source procurement (suspicious)</li>
+                    <li>Slave dongle manufacturing & distribution</li>
+                    <li>Operation of unmarked vehicle</li>
+                    <li>Conspiracy & cover-up (Mercury Incident '87)</li>
+                    <li>Interstate smuggling (recycled materials)</li>
+                </ul>
             </div>
             
-            <h3>Alleged Effects:</h3>
-            <ul>
-                <li>Subcutaneous mercury contamination</li>
-                <li>Thyroid complications</li>
-                <li>Chronic inflammation</li>
-                <li>Suspiciously enhanced resistance to tetanus</li>
-            </ul>
+            <!-- ALIASES -->
+            <div class="section-title">KNOWN ALIASES</div>
+            <div class="aliases">
+                <span class="alias-tag">El Shory</span>
+                <span class="alias-tag">The Mercury Survivor</span>
+                <span class="alias-tag">Sin Placas</span>
+                <span class="alias-tag">El de la Van Blanca</span>
+                <span class="alias-tag">El Pecas' Associate</span>
+                <span class="alias-tag">Dongle Procurement Manager</span>
+            </div>
             
-            <h3>Local Aftermath:</h3>
-            <ul>
-                <li>The corn stopped growing correctly</li>
-                <li>Everybody developed "something"</li>
-                <li>The city mayor buried the reports before re-election</li>
-            </ul>
+            <!-- PHYSICAL DESCRIPTION -->
+            <div class="section-title">PHYSICAL DESCRIPTION</div>
+            <div class="content-block">
+                <h3>DISTINCTIVE FEATURES:</h3>
+                <ul>
+                    <li>LEFT LEG: Permanent limp "from baseball"</li>
+                    <li>LEFT HAND: Semi-closed from "factory accident"</li>
+                    <li>VOICE: Raspy — claims secondhand smoke damage</li>
+                    <li>SMELL: WD-40, carne asada, mystery solvents</li>
+                    <li>CLOTHING: Always sleeveless, faded jeans, uneven boots</li>
+                </ul>
+            </div>
             
-            <p><em>None of this has ever been proven. Which is exactly why people believe it.</em></p>
-        </section>
-
-        <section>
-            <h2>CURRENT OCCUPATION</h2>
-            <div class="data-field">
-                <span class="label">Title:</span> Independent Material Acquisition Consultant
+            <!-- MERCURY MONDAY -->
+            <div class="section-title">THE MERCURY INCIDENT OF '87</div>
+            <div class="warning-bar">CLASSIFIED - COVER UP SUSPECTED</div>
+            <div class="content-block">
+                <h3>INCIDENT DETAILS:</h3>
+                <p>At age 14, subject obtained employment at unnamed chemical processing plant. Plant slogan: "SAFETY THIRD."</p>
+                <p><strong>THREE WEEKS LATER:</strong> Mercury Monday. Industrial "ventilation irregularity."</p>
+                
+                <h3>ALLEGED CONTAMINATION:</h3>
+                <ul>
+                    <li>Subcutaneous mercury deposits</li>
+                    <li>Thyroid complications</li>
+                    <li>Chronic inflammation</li>
+                    <li>Unexplained tetanus resistance</li>
+                </ul>
+                
+                <h3>AFTERMATH:</h3>
+                <ul>
+                    <li>Corn crop failures in region (ongoing)</li>
+                    <li>Widespread health issues among population</li>
+                    <li>Records buried before mayoral re-election</li>
+                    <li>Official stance: "Never happened"</li>
+                </ul>
+                
+                <div class="quote-block">
+                    "El problema no es el mercurio... es que nadie pregunta POR QUÉ había tanto mercurio."
+                </div>
             </div>
-            <h3>Specializations:</h3>
-            <ul>
-                <li>Recycled metals</li>
-                <li>Surplus electronics</li>
-                <li>"Public-source" components</li>
-                <li>Ethically ambiguous procurement logistics</li>
-            </ul>
-            <div class="quote">
-                "If it exists, I know a guy."
-                <br>— Business card, actual text
-            </div>
-        </section>
-
-        <section>
-            <h2>THE DONGLE ERA</h2>
-            <p>Shory rose to local legend after becoming involved in underground production of:</p>
-            <div class="warning">SLAVE DONGLES</div>
-            <p>Compact controller devices allegedly assembled using:</p>
-            <ul>
-                <li>Reclaimed aluminum</li>
-                <li>Retired government hardware</li>
-                <li>Abandoned USB hubs</li>
-                <li>And "materials sourced from public containers"</li>
-            </ul>
-            <div class="quote">
-                "No es robado si nadie lo está usando."
-                <br>— Shory, on procurement ethics
-            </div>
-        </section>
-
-        <section>
-            <h2>VEHICLE</h2>
-            <div class="van">
-1998 CHEVY ASTRO VAN
-━━━━━━━━━━━━━━━━━━
-Color: WHITE
-Plates: NONE
-Condition: QUESTIONABLE
-            </div>
-            <h3>Notable Features:</h3>
-            <ul>
-                <li>One mismatched door</li>
-                <li>Passenger window doesn't roll down</li>
-                <li>Rear suspension squeaks like tortured dolphins</li>
-                <li>Appears near industrial parks</li>
-                <li>Behind swap meets</li>
-                <li>Somehow already parked wherever he was supposedly heading</li>
-            </ul>
-            <p><strong>Nobody has seen him buy gas.</strong></p>
-        </section>
-
-        <section>
-            <h2>KNOWN ASSOCIATES</h2>
-            <h3>El Pecas</h3>
-            <p>A mysterious companion believed to communicate exclusively through:</p>
-            <ul>
-                <li>Nodding</li>
-                <li>Chewing sunflower seeds</li>
-                <li>Saying: "Simón."</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>PERSONALITY PROFILE</h2>
-            <p>Shory is:</p>
-            <ul>
-                <li>Strangely philosophical</li>
-                <li>Unintentionally inspirational</li>
-                <li>Highly conspiratorial</li>
-                <li>Emotionally sincere beneath layers of nonsense</li>
-            </ul>
-            <p>He tells stories with <strong>absolute confidence</strong> even when:</p>
-            <ul>
-                <li>Contradicting himself</li>
-                <li>Inventing details live</li>
-                <li>Or describing events impossible under basic physics</li>
-            </ul>
-            <p><em>Yet somehow… people keep listening.</em></p>
-        </section>
-
-        <section>
-            <h2>SPEECH PATTERNS</h2>
-            <p>Shory speaks like a retired mechanic, conspiracy podcast host, and your <em>tío</em> after three Modelos.</p>
             
-            <div class="quote">
-                "El problema no es el mercurio… es que nadie pregunta POR QUÉ había tanto mercurio."
+            <!-- OCCUPATION -->
+            <div class="section-title">CRIMINAL ENTERPRISE</div>
+            <div class="content-block">
+                <h3>BUSINESS: Independent Material Acquisition Consultant</h3>
+                <p><strong>SPECIALTIES:</strong> Recycled metals, surplus electronics, "public-source" components, ethically ambiguous procurement logistics</p>
+                
+                <div class="quote-block">
+                    "If it exists, I know a guy." — Business card (actual quote)
+                </div>
+                
+                <h3>THE DONGLE ERA:</h3>
+                <p>Rose to local prominence manufacturing "Slave Dongles" — compact controller devices allegedly assembled from reclaimed aluminum, retired government hardware, abandoned USB hubs, and materials "sourced from public containers."</p>
+                
+                <div class="quote-block">
+                    "No es robado si nadie lo está usando."
+                </div>
             </div>
-            <div class="quote">
-                "Las tiroides no fallan solas, compa."
+            
+            <!-- VEHICLE -->
+            <div class="section-title">KNOWN VEHICLE</div>
+            <div class="content-block">
+                <h3>1998 CHEVY ASTRO VAN - WHITE</h3>
+                <p><strong>PLATES:</strong> NONE</p>
+                <p><strong>CHARACTERISTICS:</strong></p>
+                <ul>
+                    <li>One mismatched door</li>
+                    <li>Passenger window non-functional</li>
+                    <li>Rear suspension emits dolphin-like squeaks</li>
+                    <li>Sighted near industrial parks, behind swap meets</li>
+                    <li>Always appears at destination before subject arrives</li>
+                </ul>
+                <p><strong>CRITICAL NOTE:</strong> No one has ever witnessed him purchase fuel.</p>
             </div>
-            <div class="quote">
-                "Todo está conectado. Full circle."
+            
+            <!-- ASSOCIATES -->
+            <div class="section-title">KNOWN ASSOCIATES</div>
+            <div class="content-block">
+                <h3>EL PECAS - ACCOMPLICE</h3>
+                <p>Mysterious companion. Communication method: nodding, sunflower seed consumption, and single word: "Simón."</p>
+                <p><strong>THREAT LEVEL:</strong> Unknown. Approach with caution.</p>
             </div>
-            <div class="quote">
-                "No coincida."
+            
+            <!-- PSYCHOLOGY -->
+            <div class="section-title">BEHAVIORAL PROFILE</div>
+            <div class="content-block">
+                <h3>PERSONALITY TRAITS:</h3>
+                <ul>
+                    <li>Philosophically inclined</li>
+                    <li>Unintentionally inspirational</li>
+                    <li>Conspiratorial mindset</li>
+                    <li>Disturbing emotional sincerity</li>
+                </ul>
+                
+                <h3>PATTERN ANALYSIS:</h3>
+                <p>Subject tells elaborate stories with absolute confidence while simultaneously contradicting himself, inventing details in real-time, and describing physically impossible events.</p>
+                <p><strong>ANOMALY:</strong> People listen anyway. Investigate psychological manipulation techniques.</p>
             </div>
-            <div class="quote">
-                "Eso viene desde arriba."
+            
+            <!-- QUOTES -->
+            <div class="section-title">RECORDED STATEMENTS</div>
+            <div class="content-block">
+                <div class="quote-block">
+                    "Las tiroides no fallan solas, compa."
+                </div>
+                <div class="quote-block">
+                    "Todo está conectado. Full circle."
+                </div>
+                <div class="quote-block">
+                    "Eso viene desde arriba."
+                </div>
+                <div class="quote-block">
+                    "El maíz ya no crece igual desde el '87."
+                </div>
+                <div class="quote-block">
+                    "La vida no se trata de hacer dinero... se trata de sobrevivir suficiente tiempo para contar la historia."
+                </div>
             </div>
-            <div class="quote">
-                "El maíz ya no crece igual desde el '87."
+            
+            <!-- RUMORS -->
+            <div class="section-title">INTELLIGENCE & RUMORS</div>
+            <div class="content-block">
+                <ul>
+                    <li>Subject disappeared for 6 months living behind abandoned tire shop</li>
+                    <li>Can identify metal compositions by smell alone</li>
+                    <li>Possesses mental map of every abandoned warehouse in region</li>
+                    <li>Survived 2-year period on gas station burritos exclusively</li>
+                    <li>Local news interviewed him; footage subsequently vanished</li>
+                    <li>Claims to have uncle in every city (CORROBORATE)</li>
+                </ul>
             </div>
-        </section>
-
-        <section>
-            <h2>URBAN LEGENDS & RUMORS</h2>
-            <ul>
-                <li>He once disappeared for six months living behind a tire shop</li>
-                <li>He can identify metal grades by smell</li>
-                <li>He knows where every abandoned warehouse is</li>
-                <li>He survived exclusively on gas station burritos for two years</li>
-                <li>He was once interviewed by local news but the footage vanished</li>
-                <li>He has an uncle in every city somehow</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>PERSONAL PHILOSOPHY</h2>
-            <div class="quote">
-                "La vida no se trata de hacer dinero…<br>
-                se trata de sobrevivir suficiente tiempo para contar la historia."
+            
+            <!-- WARNING -->
+            <div class="warning-bar">⚠️ DO NOT APPROACH - HIGHLY UNRELIABLE NARRATOR ⚠️</div>
+            
+            <div class="section-title">CAUTION</div>
+            <div class="content-block">
+                <p>Subject may not actually be guilty of any specific crime. However, his existence suggests a deeper truth. What that truth is remains unknown. Recommended action: Do not engage. Allow subject to continue operating. Monitor from distance.</p>
+                <p><strong>CONFIDENTIAL NOTE:</strong> There is a feeling — difficult to articulate in official documentation — that Shory might actually believe every word he says.</p>
             </div>
-            <p style="margin-top: 15px; font-style: italic;">
-                And beneath all the jokes and absurdity…<br>
-                there's this weird feeling that Shory might actually believe every word he says.
-            </p>
-        </section>
-
-        <div class="disclaimer">
-            DISCLAIMER: This profile is entirely fictional and created for satirical purposes. Any resemblance to real persons, living or dead, or actual events is purely coincidental. El Shory is a character. Probably.
         </div>
-
+        
+        <!-- FOOTER -->
         <div class="footer">
-            <p>Profile compiled: 2026-05-13</p>
-            <p>Source: Questionable public archives</p>
-            <p>Accuracy level: UNVERIFIABLE</p>
-            <p style="margin-top: 20px;">
-                👁️ If you're reading this, El Shory probably saw you. 👁️
-            </p>
+            WANTED POSTER DATABASE | COMPILED 2026-05-13
+            <br>
+            STATUS: AT LARGE | LAST CONFIRMED: UNCONFIRMED
+            <br>
+            IF SPOTTED: DO NOT ENGAGE | REPORT TO AUTHORITIES
         </div>
     </div>
 </body>
