@@ -8,7 +8,7 @@
     <meta property="og:description" content="Archived accounts. Unverified reports. A story that's been retold for 25 years. What really happened?">
     <meta property="og:url" content="https://markusclaw.github.io/el-shory-profile/characters/mercury-incident/">
     <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,354 +17,488 @@
         }
         
         body {
-            background: #1a1a1a;
-            color: #333;
-            font-family: 'IBM Plex Serif', serif;
-            line-height: 1.7;
+            background: #0f0f0f;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             padding: 0;
         }
         
         .nav-breadcrumb {
-            padding: 20px 40px;
-            background: #f5f5f5;
-            border-bottom: 1px solid #ddd;
+            padding: 20px 60px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
         .nav-breadcrumb a {
-            color: #666;
+            color: #888;
             text-decoration: none;
             font-size: 12px;
             font-weight: 500;
+            letter-spacing: 0.5px;
         }
         
         .nav-breadcrumb a:hover {
-            color: #333;
+            color: #e0e0e0;
         }
         
         .nav-breadcrumb span {
-            color: #999;
+            color: #555;
             margin: 0 8px;
         }
         
-        .container {
-            max-width: 900px;
+        .hero-section {
+            padding: 100px 60px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 60px 40px;
-        }
-        
-        .document-header {
-            background: #f0f0f0;
-            border: 3px solid #333;
-            padding: 40px;
-            margin-bottom: 40px;
             text-align: center;
         }
         
-        .document-status {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 11px;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-        
-        .document-title {
-            font-size: 48px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
-        
-        .document-date {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 13px;
-            color: #666;
+        .hero-section h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 800;
             margin-bottom: 20px;
+            color: #fff;
+            line-height: 1;
         }
         
-        .document-divider {
-            height: 2px;
-            background: #333;
-            margin: 30px 0;
+        .hero-section .subtitle {
+            font-size: 18px;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         
-        .section {
-            margin-bottom: 50px;
+        .hero-section .status {
+            font-size: 12px;
+            color: #666;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        
+        .content-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
         }
         
         .section-title {
-            font-size: 18px;
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
             font-weight: 700;
+            margin: 80px 0 40px 0;
+            color: #fff;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .section-grid-full {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .content-block {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .content-block h3 {
+            font-size: 16px;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .content-block ul {
+            list-style: none;
+            margin-bottom: 0;
+        }
+        
+        .content-block li {
+            padding: 8px 0;
+            color: #ccc;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .content-block li:last-child {
+            border-bottom: none;
+        }
+        
+        .content-block p {
+            margin-bottom: 15px;
+            color: #ccc;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        .quote-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+        }
+        
+        .quote-text {
+            font-size: 18px;
+            color: #e0e0e0;
+            font-style: italic;
+            line-height: 1.8;
+        }
+        
+        .quote-attribution {
+            font-size: 12px;
+            color: #888;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #1a1a1a;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #333;
-        }
-        
-        .section-content {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #333;
-        }
-        
-        .section-content p {
-            margin-bottom: 15px;
-        }
-        
-        .section-content ul {
-            margin-left: 30px;
-            margin-bottom: 15px;
-        }
-        
-        .section-content li {
-            margin-bottom: 10px;
-        }
-        
-        .quote {
-            background: #f9f9f9;
-            border-left: 4px solid #333;
-            padding: 20px;
-            margin: 20px 0;
-            font-style: italic;
-            font-size: 14px;
-            color: #555;
+            margin-top: 15px;
         }
         
         .unverified {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            padding: 15px;
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid rgba(255, 193, 7, 0.5);
+            padding: 20px;
+            border-radius: 4px;
             margin: 20px 0;
-            font-size: 13px;
+            font-size: 14px;
+            color: #ffc107;
         }
         
         .unverified::before {
-            content: "⚠ UNVERIFIED CLAIM: ";
+            content: "⚠ UNVERIFIED: ";
             font-weight: 700;
-            color: #cc7700;
         }
         
         .footnote {
-            font-family: 'IBM Plex Mono', monospace;
             font-size: 12px;
-            color: #999;
-            margin-top: 5px;
+            color: #888;
+            margin-top: 12px;
             font-style: italic;
         }
         
-        .footer {
-            background: #f0f0f0;
-            border-top: 3px solid #333;
-            padding: 40px;
-            margin-top: 60px;
+        .network-section {
+            margin-top: 100px;
+        }
+        
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .network-card {
+            position: relative;
+            cursor: pointer;
             text-align: center;
-            font-size: 12px;
-            color: #666;
-            font-family: 'IBM Plex Mono', monospace;
+            transition: all 0.3s ease;
         }
         
-        .back-to-network {
-            background: #333;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 40px;
+        .network-avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s ease;
+        }
+        
+        .network-card:hover .network-avatar {
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+        
+        .network-name {
+            font-size: 14px;
             font-weight: 600;
-            border-radius: 2px;
-            transition: all 0.3s;
+            color: #e0e0e0;
+            margin-bottom: 8px;
         }
         
-        .back-to-network:hover {
-            background: #1a1a1a;
+        .network-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 16px;
+            border-radius: 6px;
+            white-space: nowrap;
+            font-size: 11px;
+            color: #ccc;
+            z-index: 10;
         }
         
-        @media (max-width: 768px) {
-            .container {
+        .network-card:hover .network-tooltip {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(-15px);
+        }
+        
+        .tooltip-row {
+            margin: 4px 0;
+        }
+        
+        .tooltip-label {
+            color: #888;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .tooltip-value {
+            color: #e0e0e0;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 60px;
+            margin-top: 100px;
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 1024px) {
+            .hero-section {
+                padding: 60px 40px;
+            }
+            
+            .hero-section h1 {
+                font-size: 48px;
+            }
+            
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 0 40px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-section {
                 padding: 40px 20px;
             }
             
-            .document-title {
-                font-size: 32px;
+            .hero-section h1 {
+                font-size: 36px;
             }
             
             .section-title {
-                font-size: 16px;
+                font-size: 32px;
+            }
+            
+            .content-section {
+                padding: 0 20px;
+            }
+            
+            .network-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 20px;
+            }
+            
+            .network-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- NAV -->
+    <!-- BREADCRUMB NAV -->
     <div class="nav-breadcrumb">
         <a href="../../">← Back to Universe</a>
     </div>
     
-    <!-- CONTAINER -->
-    <div class="container">
-        <a href="../../" class="back-to-network">← Back to Network</a>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="subtitle">Archived Account</div>
+        <h1>Mercury Monday</h1>
+        <div class="status">Unverified Report | Date Disputed: Late 1980s</div>
+    </section>
+    
+    <!-- OVERVIEW -->
+    <div class="content-section">
+        <h2 class="section-title">What Happened?</h2>
         
-        <!-- DOCUMENT HEADER -->
-        <div class="document-header">
-            <div class="document-status">ARCHIVED ACCOUNT | UNVERIFIED DETAILS</div>
-            <h1 class="document-title">MERCURY MONDAY</h1>
-            <div class="document-date">The Incident of Late 1980s | Exact Date Disputed</div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">Overview</h2>
-            <div class="section-content">
+        <div class="section-grid-full">
+            <div class="content-block">
+                <h3>The Story</h3>
                 <p>According to partially documented local accounts, an industrial incident involving mercury exposure occurred at an unnamed thermostat manufacturing facility somewhere within the border region industrial zone.</p>
-                <p>The exact year remains disputed. Most witnesses claim 1987. Others insist "earlier." All details that follow are drawn from unreliable testimony, rumor, and oral tradition.</p>
+                <p style="margin-top: 15px;">The exact year remains disputed. Most witnesses claim 1987. Others insist "earlier." All details that follow are drawn from unreliable testimony, rumor, and oral tradition.</p>
+                <div class="unverified">No official investigation was ever completed. No government agency has acknowledged contamination.</div>
             </div>
         </div>
-        
-        <div class="document-divider"></div>
-        
-        <div class="section">
-            <h2 class="section-title">The Facility</h2>
-            <div class="section-content">
-                <p>Multiple witnesses describe an industrial thermostat manufacturing plant that:</p>
+    </div>
+    
+    <!-- THE FACILITY -->
+    <div class="content-section">
+        <h2 class="section-title">The Factory</h2>
+        <div class="section-grid">
+            <div class="content-block">
+                <h3>What We Know</h3>
                 <ul>
+                    <li>Thermostat manufacturing plant</li>
                     <li>No longer appears on official maps</li>
-                    <li>Specialized in mercury tilt relays and climate-control components</li>
-                    <li>Was described as "hotter than outside and smelling like batteries"</li>
-                    <li>Employed an unknown number of workers</li>
+                    <li>Specialized in mercury tilt relays</li>
+                    <li>Described as "hotter than outside"</li>
+                    <li>Smelled "like batteries"</li>
                 </ul>
-                <div class="unverified">One witness claimed workers routinely handled broken containment bulbs containing liquid mercury during unsupervised shifts.</div>
+            </div>
+            <div class="content-block">
+                <h3>The Work</h3>
+                <ul>
+                    <li>Climate-control components</li>
+                    <li>Mercury switching mechanisms</li>
+                    <li>Broken containment bulbs</li>
+                    <li>Unsealed transport containers</li>
+                    <li>Liquid mercury on the floor</li>
+                </ul>
             </div>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title">The Mercury Source</h2>
-            <div class="section-content">
-                <p>Persistent rumors suggest the mercury originated from:</p>
-                <ul>
-                    <li>Eastern European industrial surplus channels</li>
-                    <li>Ukrainian decommissioned Cold War inventory</li>
-                    <li>Mislabeled wartime material stock</li>
-                </ul>
-                <p>Multiple witnesses reference:</p>
-                <ul>
-                    <li>Military-style crates with faded foreign markings</li>
-                    <li>Missing customs documentation</li>
-                    <li>Unlabeled containers stored improperly</li>
-                </ul>
-                <div class="footnote">No records confirm these claims. No agency has acknowledged investigating the import chain.</div>
+    </div>
+    
+    <!-- MERCURY SOURCE -->
+    <div class="content-section">
+        <h2 class="section-title">Where It Came From</h2>
+        <div class="section-grid-full">
+            <div class="content-block">
+                <h3>The Mercury</h3>
+                <p>Rumors persist that the mercury originated from Eastern European surplus channels—specifically Ukrainian industrial suppliers and decommissioned Cold War inventory.</p>
+                <div class="quote-section">
+                    <div class="quote-text">Military-style crates. Faded foreign markings. Missing customs documentation.</div>
+                </div>
+                <div class="unverified">No records confirm this chain of supply. No agency has acknowledged investigating the import.</div>
             </div>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title">Documented Exposure Conditions</h2>
-            <div class="section-content">
-                <p>According to witness accounts, workplace safety protocols were:</p>
-                <ul>
-                    <li>Nonexistent or ignored</li>
-                    <li>Enforcement was minimal</li>
-                    <li>Noncompliance violations were filed but unaddressed</li>
-                </ul>
-                <div class="quote">"You could see silver beads rolling on the floor."</div>
-                <div class="footnote">— Anonymous witness testimony</div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">The Tuna Incident</h2>
-            <div class="section-content">
-                <p>A recurring local rumor, impossible to verify:</p>
-                <div class="quote">Workers routinely consumed canned tuna sandwiches during overnight shifts while simultaneously handling mercury-contaminated materials.</div>
-                <p>Some residents speculate this combination:</p>
-                <ul>
-                    <li>Accelerated neurological symptoms</li>
-                    <li>Worsened absorption rates</li>
-                    <li>Contributed to behavioral irregularities</li>
-                </ul>
-                <div class="unverified">Medical basis for this claim remains highly questionable. The story persists in local folklore regardless.</div>
-            </div>
-        </div>
-        
-        <div class="document-divider"></div>
-        
-        <div class="section">
-            <h2 class="section-title">El Shory Connection</h2>
-            <div class="section-content">
+    </div>
+    
+    <!-- EL SHORY CONNECTION -->
+    <div class="content-section">
+        <h2 class="section-title">El Shory Connection</h2>
+        <div class="section-grid-full">
+            <div class="content-block">
+                <h3>Was He There?</h3>
                 <p>Unverified reports place a young Jorge "El Shory" Shortinez Hernández-Reyes at or near the facility during the incident period.</p>
-                <p>Accounts conflict:</p>
-                <ul>
+                <p style="margin-top: 15px;">Accounts conflict wildly:</p>
+                <ul style="margin-top: 12px;">
                     <li>Some claim he worked shipping for the facility</li>
                     <li>Others insist he handled incoming crates</li>
-                    <li>Still others say he cleaned damaged relay components</li>
+                    <li>Still others say he cleaned mercury-contaminated relay components</li>
                     <li>A minority claim he was never officially employed there</li>
                 </ul>
                 <div class="unverified">No documentation confirms any of these claims. Shory himself has never provided a detailed account.</div>
             </div>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title">Aftermath & Cover-Up</h2>
-            <div class="section-content">
-                <p>Following the incident:</p>
-                <ul>
-                    <li>The facility reportedly shut down</li>
-                    <li>Records disappeared</li>
-                    <li>Environmental cleanup was never completed</li>
-                    <li>No agency has acknowledged contamination</li>
-                </ul>
-                <p>Locals claim:</p>
-                <ul>
-                    <li>Soil conditions changed</li>
-                    <li>Livestock became sick</li>
-                    <li>Agricultural yields declined for years</li>
-                    <li>Corn production never fully recovered</li>
-                </ul>
-                <div class="unverified">These claims have never been scientifically documented or officially investigated.</div>
+    </div>
+    
+    <!-- THE TUNA STORY -->
+    <div class="content-section">
+        <h2 class="section-title">The Tuna Incident</h2>
+        <div class="section-grid-full">
+            <div class="content-block">
+                <h3>Impossible to Verify</h3>
+                <div class="quote-section">
+                    <div class="quote-text">Workers routinely consumed canned tuna sandwiches during overnight shifts while simultaneously handling mercury-contaminated materials.</div>
+                </div>
+                <p style="margin-top: 20px;">Some residents speculate this combination accelerated neurological symptoms and worsened absorption rates.</p>
+                <div class="unverified">Medical basis for this claim remains highly questionable. The story persists in local folklore regardless.</div>
             </div>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title">Reported Health Effects</h2>
-            <div class="section-content">
-                <p>Within the region, residents commonly attribute the following conditions to "Mercury Monday":</p>
+    </div>
+    
+    <!-- HEALTH EFFECTS -->
+    <div class="content-section">
+        <h2 class="section-title">What Came After</h2>
+        <div class="section-grid">
+            <div class="content-block">
+                <h3>Physical Effects</h3>
                 <ul>
                     <li>Thyroid dysfunction</li>
                     <li>Voice damage and hoarseness</li>
                     <li>Chronic inflammation</li>
                     <li>Memory issues</li>
-                    <li>Paranoia and conspiratorial thinking</li>
-                    <li>Chronic fatigue</li>
                     <li>"Looking permanently tired"</li>
                 </ul>
-                <div class="unverified">No causal link has ever been established between the incident and these conditions. Attribution remains speculative and folkloric.</div>
             </div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title">Cultural Impact</h2>
-            <div class="section-content">
-                <p>Within the region, "Mercury Monday" became:</p>
+            <div class="content-block">
+                <h3>Environmental Changes</h3>
                 <ul>
-                    <li>Urban legend</li>
-                    <li>Conspiracy theory</li>
-                    <li>Workplace cautionary tale</li>
-                    <li>Explanation for nearly everything unusual</li>
+                    <li>Soil conditions changed</li>
+                    <li>Livestock became sick</li>
+                    <li>Agricultural yields declined</li>
+                    <li>Corn production never recovered</li>
+                    <li>Ground remains untested</li>
                 </ul>
-                <p>Common phrases that emerged:</p>
-                <div class="quote">"Eso viene desde el mercurio."</div>
-                <div class="quote">"Desde ese día nada crece igual."</div>
-                <p>The incident became the foundational mythology for an entire region's sense of contamination and suspicion.</p>
             </div>
         </div>
-        
-        <div class="section">
-            <h2 class="section-title">Current Status</h2>
-            <div class="section-content">
+        <div class="section-grid-full">
+            <div class="unverified">No causal link has ever been scientifically established. No agency has acknowledged contamination or completed environmental testing.</div>
+        </div>
+    </div>
+    
+    <!-- CULTURAL IMPACT -->
+    <div class="content-section">
+        <h2 class="section-title">The Mythology</h2>
+        <div class="section-grid-full">
+            <div class="content-block">
+                <p>Within the region, "Mercury Monday" became foundational mythology.</p>
+                <p style="margin-top: 15px;">People attribute nearly everything unusual to this incident:</p>
+                <div class="quote-section">
+                    <div class="quote-text">"Eso viene desde el mercurio."</div>
+                    <div class="quote-text" style="margin-top: 15px;">"Desde ese día nada crece igual."</div>
+                </div>
+                <p style="margin-top: 20px;">Whether the incident actually occurred is almost irrelevant. The story shapes how the region understands itself.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CURRENT STATUS -->
+    <div class="content-section">
+        <h2 class="section-title">Today</h2>
+        <div class="section-grid-full">
+            <div class="content-block">
                 <p>The original facility site is believed abandoned.</p>
-                <p>Satellite imagery allegedly shows:</p>
-                <ul>
+                <p style="margin-top: 15px;">Satellite imagery allegedly shows:</p>
+                <ul style="margin-top: 12px;">
                     <li>Collapsed structures</li>
                     <li>Evidence of illegal dumping</li>
                     <li>Intermittent vehicle activity at night</li>
@@ -372,29 +506,35 @@
                 <div class="unverified">Several locals claim El Shory still visits the area. Usually at night. Nobody has confirmed following him there.</div>
             </div>
         </div>
-        
-        <div class="document-divider"></div>
-        
-        <div class="section">
-            <h2 class="section-title">Conclusion</h2>
-            <div class="section-content">
-                <p>The Mercury Incident remains:</p>
-                <ul>
-                    <li>Partially documented</li>
-                    <li>Heavily disputed</li>
-                    <li>Impossible to verify</li>
-                    <li>Deeply believed</li>
-                </ul>
-                <p>What is certain: the story shapes how the region understands itself. Whether the incident actually occurred is almost irrelevant. The mythology is real.</p>
-            </div>
+    </div>
+    
+    <!-- CHARACTER NETWORK -->
+    <div class="content-section network-section">
+        <h2 class="section-title">Related Figures</h2>
+        <div class="network-grid">
+            <a href="../el-shory/" class="network-card" style="text-decoration: none; color: inherit;">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Connection:</span> <span class="tooltip-value">Alleged Witness</span></div>
+                </div>
+                <div class="network-avatar" style="background-image: url('../../portrait.jpg');"></div>
+                <div class="network-name">El Shory</div>
+            </a>
+            
+            <a href="../el-pecas/" class="network-card" style="text-decoration: none; color: inherit;">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Connection:</span> <span class="tooltip-value">Associated With</span></div>
+                </div>
+                <div class="network-avatar" style="background-image: url('../../pecas.jpg');"></div>
+                <div class="network-name">El Pecas</div>
+            </a>
         </div>
-        
-        <!-- FOOTER -->
-        <div class="footer">
-            ARCHIVED ACCOUNT | DATE UNCERTAIN | STATUS: UNCONFIRMED
-            <br>
-            "Some details are absurd. Some sound plausible. Some are contradictory. Everyone remembers it differently."
-        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="footer">
+        Archived Account | Date Uncertain | Status: Unconfirmed
+        <br>
+        <span style="color: #555; font-size: 11px; margin-top: 15px; display: block;">Some details are absurd. Some sound plausible. Some are contradictory. Everyone remembers it differently.</span>
     </div>
 </body>
 </html>
