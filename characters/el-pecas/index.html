@@ -302,6 +302,61 @@
             font-weight: 600;
         }
         
+        .next-character-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 50px 40px;
+            margin-top: 80px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .next-character-section:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+        
+        .next-character-image {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .next-character-text h3 {
+            font-size: 14px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .next-character-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .next-character-text p {
+            font-size: 15px;
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
         .footer {
             background: rgba(0, 0, 0, 0.5);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -311,6 +366,16 @@
             color: #666;
             font-size: 12px;
             letter-spacing: 1px;
+        }
+        
+        .next-character-section {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 40px 30px;
+        }
+        
+        .next-character-text h2 {
+            font-size: 36px;
         }
         
         @media (max-width: 1024px) {
@@ -514,17 +579,23 @@
         </div>
     </div>
     
+    <!-- NEXT CHARACTER -->
+    <div class="content-section" style="margin-bottom: 40px;">
+        <a href="../el-shory/" class="next-character-section">
+            <div class="next-character-image" style="background-image: url('../../portrait.jpg');"></div>
+            <div class="next-character-text">
+                <h3>Next: The Finder</h3>
+                <h2>El Shory</h2>
+                <p>The man who finds impossible things. Government equipment. Classified hardware. Whatever you need. Three days. No questions. No explanations. Click to explore.</p>
+            </div>
+        </a>
+    </div>
+    
     <!-- FOOTER -->
     <div class="footer">
         Character Profile Compiled 2026 | Status: Active | Last Confirmed: Now
         <br>
         <span style="color: #555; font-size: 11px; margin-top: 15px; display: block;">He doesn't say much. But when he does, you listen.</span>
     </div>
-    
-    <script>
-        function navigateTo(path) {
-            window.location.href = path;
-        }
-    </script>
 </body>
 </html>

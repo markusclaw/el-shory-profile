@@ -297,6 +297,61 @@
             font-weight: 600;
         }
         
+        .next-character-section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 50px 40px;
+            margin-top: 80px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .next-character-section:hover {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(10px);
+        }
+        
+        .next-character-image {
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .next-character-text h3 {
+            font-size: 14px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .next-character-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .next-character-text p {
+            font-size: 15px;
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
         .footer {
             background: rgba(0, 0, 0, 0.5);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -306,6 +361,16 @@
             color: #666;
             font-size: 12px;
             letter-spacing: 1px;
+        }
+        
+        .next-character-section {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 40px 30px;
+        }
+        
+        .next-character-text h2 {
+            font-size: 36px;
         }
         
         @media (max-width: 1024px) {
@@ -397,25 +462,7 @@
         </div>
     </section>
     
-    <!-- BACKGROUND -->
-    <div class="content-section">
-        <h2 class="section-title">Origin</h2>
-        
-        <div class="quote-section">
-            <div class="quote-text">"La vida no se trata de hacer dinero... se trata de sobrevivir suficiente tiempo para contar la historia."</div>
-            <div class="quote-attribution">— El Shory</div>
-        </div>
-        
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>The Mercury Incident of '87</h3>
-                <p>At fourteen, El Shory found work at a chemical processing plant in an unnamed industrial border town. The facility's motto was simple: "Safety Third."</p>
-                <p style="margin-top: 12px;">Three weeks into the job came what locals call Mercury Monday—an industrial "ventilation irregularity" that would reshape his life. Official records describe it as minor. Residents tell a different story: the day the pigeons forgot how to fly.</p>
-                <p style="margin-top: 12px;">What happened next is documented only in whispers. Subcutaneous mercury contamination. Thyroid complications. A resistance to tetanus that shouldn't exist. The corn stopped growing correctly. Everyone in the region developed something—a sickness without a name. The mayor buried the reports before re-election.</p>
-                <p style="margin-top: 12px;">None of it was ever officially proven. Which is exactly why people believe it.</p>
-            </div>
-        </div>
-    </div>
+
     
     <!-- CHARACTERISTICS -->
     <div class="content-section">
@@ -603,6 +650,18 @@
         </div>
     </div>
     
+    <!-- NEXT CHARACTER -->
+    <div class="content-section" style="margin-bottom: 40px;">
+        <a href="../el-pecas/" class="next-character-section">
+            <div class="next-character-image" style="background-image: url('../../pecas.jpg');"></div>
+            <div class="next-character-text">
+                <h3>Next: The Silent Partner</h3>
+                <h2>El Pecas</h2>
+                <p>Where El Shory finds, Pecas follows. Where Shory talks, Pecas listens. The man of few words and inexplicable loyalty. Click to explore.</p>
+            </div>
+        </a>
+    </div>
+    
     <!-- FOOTER -->
     <div class="footer">
         Character Profile Compiled 2026 | Status: At Large | Last Confirmed: Unknown
@@ -610,10 +669,6 @@
         <span style="color: #555; font-size: 11px; margin-top: 15px; display: block;">Explore the network. Follow the threads. Every name leads somewhere.</span>
     </div>
     
-    <script>
-        function navigateTo(path) {
-            window.location.href = path;
-        }
-    </script>
+
 </body>
 </html>
