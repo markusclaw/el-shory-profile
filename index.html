@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL SHORY - Material Acquisition Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: "Comic Sans MS", "Papyrus", cursive;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF6347 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #FFFFCC;
+            border: 5px dashed #FF1493;
+            padding: 30px;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .container::before {
+            content: "⚠️";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 40px;
+            transform: rotate(-15deg);
+        }
+        
+        .container::after {
+            content: "⚠️";
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            font-size: 40px;
+            transform: rotate(15deg);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #FF1493;
+            font-size: 48px;
+            text-shadow: 3px 3px 0px #00CED1;
+            margin-bottom: 10px;
+            animation: blink 1s infinite;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #DC143C;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 30px;
+            background: #FFB6C1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .warning {
+            background: #FF6347;
+            color: white;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #DC143C;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        section {
+            margin: 25px 0;
+            padding: 15px;
+            background: white;
+            border: 3px solid #FF1493;
+            border-radius: 10px;
+        }
+        
+        h2 {
+            color: #FF1493;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-decoration: underline wavy;
+        }
+        
+        h3 {
+            color: #00CED1;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .data-field {
+            margin: 12px 0;
+            padding: 10px;
+            background: #F0FFFF;
+            border-left: 4px solid #FFA500;
+        }
+        
+        .label {
+            font-weight: bold;
+            color: #FF1493;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .quote {
+            background: #FFE4B5;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #FF8C00;
+            font-style: italic;
+            color: #8B4513;
+            font-size: 14px;
+        }
+        
+        .van {
+            background: #DCDCDC;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+            border: 3px dotted #666;
+            font-family: monospace;
+        }
+        
+        .rumor {
+            background: #E6E6FA;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #9932CC;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 3px dashed #FF1493;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #FFD700;
+            padding: 5px 10px;
+            margin: 5px;
+            border-radius: 20px;
+            font-weight: bold;
+            border: 2px solid #FFA500;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+        
+        .disclaimer {
+            background: #FF6347;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            border: 3px solid #DC143C;
+            transform: rotate(-2deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 EL SHORY 🔧</h1>
+        <p class="subtitle">Material Acquisition Specialist | Independent Consultant | Unreliable Narrator</p>
+        
+        <div class="warning">
+            ⚠️ PROFILE DATA UNETHICALLY AND IMMORALLY OBTAINED FROM QUESTIONABLE PUBLIC SOURCES ⚠️
+        </div>
+
+        <section>
+            <h2>FULL IDENTITY</h2>
+            <div class="data-field">
+                <span class="label">Legal Name:</span> Jorge "El Shory" Shortinez Hernández-Reyes
+            </div>
+            <div class="data-field">
+                <span class="label">Note:</span> Nobody knows if "Shortinez" is a real <em>apellido</em> or a nickname that became legal after a clerical error in 1994.
+            </div>
+        </section>
+
+        <section>
+            <h2>ALIASES & TITLES</h2>
+            <ul>
+                <li><span class="badge">El Shory</span></li>
+                <li><span class="badge">El Pecas' Associate</span></li>
+                <li><span class="badge">The Mercury Survivor</span></li>
+                <li><span class="badge">The Public Source Specialist</span></li>
+                <li><span class="badge">"Sin Placas"</span></li>
+                <li><span class="badge">El de la Van Blanca</span></li>
+                <li><span class="badge">Slave Dongle Procurement Manager</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>VITAL STATISTICS</h2>
+            <div class="data-field">
+                <span class="label">Age:</span> Somewhere between 34 and 57. Depends on lighting, humidity, and whether he recently escaped a scrapyard argument.
+            </div>
+            <div class="data-field">
+                <span class="label">Height/Weight:</span> Unconfirmed.
+            </div>
+        </section>
+
+        <section>
+            <h2>PHYSICAL DESCRIPTION</h2>
+            <ul>
+                <li>Limp on the left leg "from baseball"</li>
+                <li>Left hand permanently semi-closed from "the factory accident"</li>
+                <li>Smells faintly of WD-40, carne asada smoke, and mystery solvents</li>
+                <li><strong>Always wears:</strong>
+                    <ul>
+                        <li>Sleeveless shirts</li>
+                        <li>Faded jeans</li>
+                        <li>Boots with uneven soles</li>
+                    </ul>
+                </li>
+                <li>Speaks with the raspy voice of a man who smoked for 40 years… but allegedly never smoked once in his life</li>
+            </ul>
+            <div class="quote">
+                "Es daño de segunda mano."
+            </div>
+        </section>
+
+        <section>
+            <h2>ORIGIN STORY: MERCURY MONDAY</h2>
+            <p>Jorge "El Shory" grew up in an unnamed industrial border town where rumors traveled faster than electricity and every third warehouse was either abandoned or "temporarily under investigation."</p>
+            
+            <p>At age 14, Shory obtained his first job at a chemical processing plant whose slogan was:</p>
+            <div class="warning">SAFETY THIRD</div>
+            
+            <p><strong>Three weeks later came The Incident of '87 — also known locally as: MERCURY MONDAY</strong></p>
+            
+            <div class="rumor">
+                <strong>Official records:</strong> "A minor industrial ventilation irregularity."
+            </div>
+            <div class="rumor">
+                <strong>Residents:</strong> "The day the pigeons forgot how to fly."
+            </div>
+            
+            <h3>Alleged Effects:</h3>
+            <ul>
+                <li>Subcutaneous mercury contamination</li>
+                <li>Thyroid complications</li>
+                <li>Chronic inflammation</li>
+                <li>Suspiciously enhanced resistance to tetanus</li>
+            </ul>
+            
+            <h3>Local Aftermath:</h3>
+            <ul>
+                <li>The corn stopped growing correctly</li>
+                <li>Everybody developed "something"</li>
+                <li>The city mayor buried the reports before re-election</li>
+            </ul>
+            
+            <p><em>None of this has ever been proven. Which is exactly why people believe it.</em></p>
+        </section>
+
+        <section>
+            <h2>CURRENT OCCUPATION</h2>
+            <div class="data-field">
+                <span class="label">Title:</span> Independent Material Acquisition Consultant
+            </div>
+            <h3>Specializations:</h3>
+            <ul>
+                <li>Recycled metals</li>
+                <li>Surplus electronics</li>
+                <li>"Public-source" components</li>
+                <li>Ethically ambiguous procurement logistics</li>
+            </ul>
+            <div class="quote">
+                "If it exists, I know a guy."
+                <br>— Business card, actual text
+            </div>
+        </section>
+
+        <section>
+            <h2>THE DONGLE ERA</h2>
+            <p>Shory rose to local legend after becoming involved in underground production of:</p>
+            <div class="warning">SLAVE DONGLES</div>
+            <p>Compact controller devices allegedly assembled using:</p>
+            <ul>
+                <li>Reclaimed aluminum</li>
+                <li>Retired government hardware</li>
+                <li>Abandoned USB hubs</li>
+                <li>And "materials sourced from public containers"</li>
+            </ul>
+            <div class="quote">
+                "No es robado si nadie lo está usando."
+                <br>— Shory, on procurement ethics
+            </div>
+        </section>
+
+        <section>
+            <h2>VEHICLE</h2>
+            <div class="van">
+1998 CHEVY ASTRO VAN
+━━━━━━━━━━━━━━━━━━
+Color: WHITE
+Plates: NONE
+Condition: QUESTIONABLE
+            </div>
+            <h3>Notable Features:</h3>
+            <ul>
+                <li>One mismatched door</li>
+                <li>Passenger window doesn't roll down</li>
+                <li>Rear suspension squeaks like tortured dolphins</li>
+                <li>Appears near industrial parks</li>
+                <li>Behind swap meets</li>
+                <li>Somehow already parked wherever he was supposedly heading</li>
+            </ul>
+            <p><strong>Nobody has seen him buy gas.</strong></p>
+        </section>
+
+        <section>
+            <h2>KNOWN ASSOCIATES</h2>
+            <h3>El Pecas</h3>
+            <p>A mysterious companion believed to communicate exclusively through:</p>
+            <ul>
+                <li>Nodding</li>
+                <li>Chewing sunflower seeds</li>
+                <li>Saying: "Simón."</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>PERSONALITY PROFILE</h2>
+            <p>Shory is:</p>
+            <ul>
+                <li>Strangely philosophical</li>
+                <li>Unintentionally inspirational</li>
+                <li>Highly conspiratorial</li>
+                <li>Emotionally sincere beneath layers of nonsense</li>
+            </ul>
+            <p>He tells stories with <strong>absolute confidence</strong> even when:</p>
+            <ul>
+                <li>Contradicting himself</li>
+                <li>Inventing details live</li>
+                <li>Or describing events impossible under basic physics</li>
+            </ul>
+            <p><em>Yet somehow… people keep listening.</em></p>
+        </section>
+
+        <section>
+            <h2>SPEECH PATTERNS</h2>
+            <p>Shory speaks like a retired mechanic, conspiracy podcast host, and your <em>tío</em> after three Modelos.</p>
+            
+            <div class="quote">
+                "El problema no es el mercurio… es que nadie pregunta POR QUÉ había tanto mercurio."
+            </div>
+            <div class="quote">
+                "Las tiroides no fallan solas, compa."
+            </div>
+            <div class="quote">
+                "Todo está conectado. Full circle."
+            </div>
+            <div class="quote">
+                "No coincida."
+            </div>
+            <div class="quote">
+                "Eso viene desde arriba."
+            </div>
+            <div class="quote">
+                "El maíz ya no crece igual desde el '87."
+            </div>
+        </section>
+
+        <section>
+            <h2>URBAN LEGENDS & RUMORS</h2>
+            <ul>
+                <li>He once disappeared for six months living behind a tire shop</li>
+                <li>He can identify metal grades by smell</li>
+                <li>He knows where every abandoned warehouse is</li>
+                <li>He survived exclusively on gas station burritos for two years</li>
+                <li>He was once interviewed by local news but the footage vanished</li>
+                <li>He has an uncle in every city somehow</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>PERSONAL PHILOSOPHY</h2>
+            <div class="quote">
+                "La vida no se trata de hacer dinero…<br>
+                se trata de sobrevivir suficiente tiempo para contar la historia."
+            </div>
+            <p style="margin-top: 15px; font-style: italic;">
+                And beneath all the jokes and absurdity…<br>
+                there's this weird feeling that Shory might actually believe every word he says.
+            </p>
+        </section>
+
+        <div class="disclaimer">
+            DISCLAIMER: This profile is entirely fictional and created for satirical purposes. Any resemblance to real persons, living or dead, or actual events is purely coincidental. El Shory is a character. Probably.
+        </div>
+
+        <div class="footer">
+            <p>Profile compiled: 2026-05-13</p>
+            <p>Source: Questionable public archives</p>
+            <p>Accuracy level: UNVERIFIABLE</p>
+            <p style="margin-top: 20px;">
+                👁️ If you're reading this, El Shory probably saw you. 👁️
+            </p>
+        </div>
+    </div>
+</body>
+</html>
