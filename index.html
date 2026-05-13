@@ -3,221 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PUBLIC SOURCE SPECIALIST INC. - We Find What You Need</title>
-    <meta property="og:title" content="PUBLIC SOURCE SPECIALIST INC.">
-    <meta property="og:description" content="Need something? We find it. Government equipment. Military surplus. Industrial salvage. No questions asked.">
-    <meta property="og:url" content="https://markusclaw.github.io/el-shory-profile/">
-    <meta property="og:type" content="website">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <title>PUBLIC SOURCE SPECIALIST INC. - Material Acquisition Solutions</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #0f0f0f; color: #e0e0e0; font-family: 'Inter', sans-serif; line-height: 1.6; }
         
-        .header {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px 60px;
+        body {
+            background: #1a1a1a url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%231a1a1a" width="100" height="100"/><rect fill="%23222" x="0" y="0" width="100" height="50"/></svg>');
+            color: #cccccc;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
         }
         
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
+        .header {
+            background: linear-gradient(90deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%);
+            border-bottom: 3px solid #ffcc00;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, #ffcc00 0px, #ffcc00 10px, transparent 10px, transparent 20px);
+            animation: scanlines 8s linear infinite;
+        }
+        
+        @keyframes scanlines {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
         }
         
         .company-name {
-            font-family: 'Playfair Display', serif;
             font-size: 48px;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.8);
+            margin: 0;
+            font-style: italic;
+            letter-spacing: 2px;
         }
         
         .tagline {
-            font-size: 18px;
-            color: #999;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-        
-        .hero-section {
-            padding: 80px 60px;
-            max-width: 1400px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .hero-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        
-        .hero-section p {
-            font-size: 16px;
-            color: #ccc;
-            margin-bottom: 15px;
-            line-height: 1.8;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .services {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 30px;
-            display: inline-block;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .services p {
             font-size: 14px;
-            color: #999;
-            margin: 0;
-        }
-        
-        .services strong {
-            color: #e0e0e0;
-        }
-        
-        .content-section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 60px;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            font-weight: 700;
-            margin: 80px 0 40px 0;
-            color: #fff;
-            padding-bottom: 15px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        
-        .team-card {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .team-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
-        
-        .team-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.08);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            overflow: hidden;
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 20px;
-        }
-        
-        .team-name {
-            font-size: 16px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-        
-        .team-title {
-            font-size: 12px;
-            color: #888;
+            color: #ff3333;
+            margin-top: 10px;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
-        .about-section {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 40px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            margin-bottom: 60px;
+        .warning-bar {
+            background: #ff3333;
+            color: #000;
+            padding: 15px;
+            margin: 20px 0;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid #000;
+            transform: skew(-2deg);
+            font-size: 13px;
         }
         
-        .about-section h3 {
-            font-size: 18px;
-            color: #fff;
-            font-weight: 700;
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .hero {
+            background: #2a2a2a;
+            border: 3px solid #ffcc00;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            color: #ffcc00;
+            font-size: 32px;
             margin-bottom: 15px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.8);
         }
         
-        .about-section p {
-            font-size: 15px;
-            color: #ccc;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-        
-        .about-section ul {
-            list-style: none;
-            margin-left: 0;
-        }
-        
-        .about-section li {
-            padding: 8px 0;
-            color: #ccc;
+        .hero p {
+            color: #cccccc;
             font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .service-box {
+            background: #1a1a1a;
+            border: 2px solid #ff3333;
+            padding: 20px;
+            margin: 15px 0;
+            color: #cccccc;
+            font-size: 12px;
+        }
+        
+        .service-box strong {
+            color: #ffcc00;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #ffcc00;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.8);
+        }
+        
+        .subsection {
+            background: #2a2a2a;
+            border: 2px solid #444;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .subsection h3 {
+            color: #ffcc00;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .subsection p {
+            color: #cccccc;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .subsection ul {
+            list-style: none;
+            margin-left: 10px;
+        }
+        
+        .subsection li {
+            color: #cccccc;
+            font-size: 13px;
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .subsection li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #ffcc00;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .team-member {
+            background: #2a2a2a;
+            border: 3px solid #ffcc00;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-member:hover {
+            background: #1a1a1a;
+            border-color: #ff3333;
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0px rgba(255,204,0,0.3);
+        }
+        
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            background: #1a1a1a;
+            border: 2px solid #ffcc00;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-name {
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .member-title {
+            color: #ff3333;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        
+        .testimonial {
+            background: #1a1a1a;
+            border-left: 4px solid #ffcc00;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-style: italic;
+            color: #aaaaaa;
+            font-size: 12px;
+        }
+        
+        .testimonial-author {
+            color: #ffcc00;
+            font-style: normal;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        
+        .disclaimer {
+            background: #1a1a1a;
+            border: 2px dashed #ff3333;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 11px;
+            color: #999999;
+            text-align: center;
+        }
+        
+        .disclaimer strong {
+            color: #ff3333;
         }
         
         .footer {
-            background: rgba(0, 0, 0, 0.5);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px 60px;
-            margin-top: 100px;
+            background: #2a2a2a;
+            border-top: 3px solid #ffcc00;
+            padding: 30px 20px;
             text-align: center;
-            color: #666;
-            font-size: 12px;
-            letter-spacing: 1px;
+            color: #666666;
+            font-size: 11px;
+            margin-top: 50px;
         }
         
-        @media (max-width: 1024px) {
-            .header { padding: 30px 40px; }
-            .company-name { font-size: 36px; }
-            .hero-section { padding: 60px 40px; }
-            .hero-section h2 { font-size: 36px; }
-            .content-section { padding: 0 40px; }
-            .team-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
-            .team-avatar { width: 100px; height: 100px; font-size: 36px; }
+        .footer p {
+            margin: 5px 0;
         }
         
-        @media (max-width: 640px) {
-            .header { padding: 20px; }
-            .company-name { font-size: 28px; }
-            .hero-section { padding: 40px 20px; }
-            .hero-section h2 { font-size: 28px; }
-            .content-section { padding: 0 20px; }
+        .online-badge {
+            display: inline-block;
+            background: #00ff00;
+            color: #000;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 11px;
+            margin-bottom: 15px;
+            border: 1px solid #000;
+        }
+        
+        @media (max-width: 768px) {
+            .company-name { font-size: 32px; }
+            .hero h2 { font-size: 24px; }
+            .section-title { font-size: 20px; }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 480px) {
+            .company-name { font-size: 24px; }
+            .hero h2 { font-size: 18px; }
             .team-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -225,108 +295,166 @@
 <body>
     <!-- HEADER -->
     <div class="header">
-        <div class="header-content">
-            <div class="company-name">PUBLIC SOURCE SPECIALIST INC.</div>
-            <div class="tagline">If It Exists, We Know A Guy</div>
-        </div>
+        <h1 class="company-name">PUBLIC SOURCE SPECIALIST INC.</h1>
+        <div class="tagline">⚠ MATERIAL ACQUISITION SOLUTIONS ⚠</div>
     </div>
     
-    <!-- HERO -->
-    <section class="hero-section">
-        <h2>We Find What You Need</h2>
-        <p>Government equipment. Military surplus. Industrial salvage. Decommissioned technology. Whatever you're looking for — classified, rare, or supposedly impossible — we have connections.</p>
-        <div class="services">
-            <p><strong>Specializing in:</strong> Material acquisition • Equipment sourcing • Public-source procurement • Logistics & delivery</p>
+    <div class="content">
+        <!-- ONLINE BADGE -->
+        <div style="text-align: center; margin: 20px 0;">
+            <span class="online-badge">● CURRENTLY ONLINE ●</span>
         </div>
-    </section>
-    
-    <!-- ABOUT -->
-    <div class="content-section">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-section">
-            <h3>Our History</h3>
-            <p>Public Source Specialist Inc. was founded on a simple principle: if something exists in the world, it can be found. For decades, we've sourced materials from government liquidations, industrial auctions, decommissioned facilities, and a network of suppliers most people don't know exist.</p>
-            <p>We don't ask questions. We don't offer paperwork. We find what you need, deliver it to your specifications, and move on.</p>
-            <h3 style="margin-top: 20px;">Our Network</h3>
-            <p>PSS Inc. operates through a carefully cultivated network of specialists, contacts, and individuals who understand the value of discretion.</p>
+        
+        <!-- WARNING -->
+        <div class="warning-bar">
+            ⚠ DISCRETION GUARANTEED | NO QUESTIONS ASKED | NO RECORDS KEPT ⚠
         </div>
-    </div>
-    
-    <!-- TEAM -->
-    <div class="content-section">
-        <h2 class="section-title">Our Team</h2>
-        <div class="team-grid">
-            <a href="characters/el-shory/" class="team-card">
-                <div class="team-avatar" style="background-image: url('portrait.jpg');"></div>
-                <div class="team-name">El Shory</div>
-                <div class="team-title">Founder & Chief Finder</div>
-            </a>
+        
+        <!-- HERO -->
+        <div class="hero">
+            <h2>NEED SOMETHING FOUND?</h2>
+            <p>Government surplus. Military equipment. Industrial salvage. Classified hardware.</p>
+            <p style="color: #ff3333; font-weight: bold; margin-top: 15px;">IF IT EXISTS, WE KNOW A GUY.</p>
             
-            <a href="characters/el-pecas/" class="team-card">
-                <div class="team-avatar" style="background-image: url('pecas.jpg');"></div>
-                <div class="team-name">El Pecas</div>
-                <div class="team-title">Operations Partner</div>
-            </a>
-            
-            <a href="characters/el-guero-mercury/" class="team-card">
-                <div class="team-avatar">⚗️</div>
-                <div class="team-name">El Güero Mercury</div>
-                <div class="team-title">Supply Chain</div>
-            </a>
-            
-            <a href="characters/shory-mom/" class="team-card">
-                <div class="team-avatar">👩</div>
-                <div class="team-name">Shory's Mom</div>
-                <div class="team-title">Family</div>
-            </a>
-            
-            <a href="characters/factory-foreman/" class="team-card">
-                <div class="team-avatar">👷</div>
-                <div class="team-name">Factory Foreman</div>
-                <div class="team-title">Historical Connection</div>
-            </a>
-            
-            <a href="characters/mayor/" class="team-card">
-                <div class="team-avatar">🎩</div>
-                <div class="team-name">The Mayor</div>
-                <div class="team-title">Government Relations</div>
-            </a>
-            
-            <a href="characters/crooked-cop/" class="team-card">
-                <div class="team-avatar">👮</div>
-                <div class="team-name">Crooked Cop</div>
-                <div class="team-title">Enforcement</div>
-            </a>
-            
-            <a href="characters/cartel-guy/" class="team-card">
-                <div class="team-avatar">🤐</div>
-                <div class="team-name">Cartel Guy</div>
-                <div class="team-title">Ambiguous</div>
-            </a>
-            
-            <a href="characters/mercury-incident/" class="team-card">
-                <div class="team-avatar">☿️</div>
-                <div class="team-name">Mercury Monday</div>
-                <div class="team-title">The Origin</div>
-            </a>
+            <div class="service-box">
+                <strong>SERVICES:</strong> Equipment Sourcing • Material Acquisition • Discreet Delivery • Zero Documentation • Logistics Solutions
+            </div>
         </div>
-    </div>
-    
-    <!-- LORE -->
-    <div class="content-section">
-        <h2 class="section-title">Our Origins</h2>
-        <div class="about-section">
-            <h3>The Mercury Incident</h3>
-            <p>PSS Inc.'s founding is inextricably linked to events that occurred in the late 1980s — a period we refer to internally as "Mercury Monday." Details remain classified and contested, but what is known: materials moved through the supply chain that shouldn't have, people were affected, and the company emerged from the ashes of that incident.</p>
-            <p>We don't discuss it publicly. But the incident shaped who we are and what we do.</p>
+        
+        <!-- ABOUT -->
+        <div class="section">
+            <h3 class="section-title">WHO WE ARE</h3>
+            <div class="subsection">
+                <h3>Est. 1987</h3>
+                <p>Public Source Specialist Inc. has been in the business of acquiring materials that are difficult to acquire through conventional channels. We operate with complete discretion.</p>
+                <p>Our network spans government liquidation auctions, decommissioned facilities, industrial surplus operations, and a carefully maintained contact base that understands the value of asking zero questions.</p>
+            </div>
+        </div>
+        
+        <!-- SERVICES -->
+        <div class="section">
+            <h3 class="section-title">WHAT WE DO</h3>
+            <div class="subsection">
+                <h3>Material Acquisition</h3>
+                <ul>
+                    <li>Government equipment sourcing</li>
+                    <li>Military surplus procurement</li>
+                    <li>Industrial salvage recovery</li>
+                    <li>Electronics & hardware</li>
+                    <li>Decommissioned machinery</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <h3>Our Guarantee</h3>
+                <ul>
+                    <li>3-5 day turnaround on most requests</li>
+                    <li>Competitive pricing</li>
+                    <li>Complete discretion</li>
+                    <li>No paperwork required</li>
+                    <li>No questions. Ever.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- TEAM -->
+        <div class="section">
+            <h3 class="section-title">OUR TEAM</h3>
+            <div class="team-grid">
+                <a href="characters/el-shory/" class="team-member">
+                    <div class="member-avatar" style="background-image: url('portrait.jpg');"></div>
+                    <div class="member-name">El Shory</div>
+                    <div class="member-title">Founder</div>
+                </a>
+                
+                <a href="characters/el-pecas/" class="team-member">
+                    <div class="member-avatar" style="background-image: url('pecas.jpg');"></div>
+                    <div class="member-name">El Pecas</div>
+                    <div class="member-title">Operations</div>
+                </a>
+                
+                <a href="characters/el-guero-mercury/" class="team-member">
+                    <div class="member-avatar">⚗️</div>
+                    <div class="member-name">El Güero Mercury</div>
+                    <div class="member-title">Supply Chain</div>
+                </a>
+                
+                <a href="characters/shory-mom/" class="team-member">
+                    <div class="member-avatar">👩</div>
+                    <div class="member-name">Shory's Mom</div>
+                    <div class="member-title">Concerned</div>
+                </a>
+                
+                <a href="characters/factory-foreman/" class="team-member">
+                    <div class="member-avatar">👷</div>
+                    <div class="member-name">Factory Foreman</div>
+                    <div class="member-title">Historical</div>
+                </a>
+                
+                <a href="characters/mayor/" class="team-member">
+                    <div class="member-avatar">🎩</div>
+                    <div class="member-name">The Mayor</div>
+                    <div class="member-title">Government</div>
+                </a>
+                
+                <a href="characters/crooked-cop/" class="team-member">
+                    <div class="member-avatar">👮</div>
+                    <div class="member-name">Crooked Cop</div>
+                    <div class="member-title">Enforcement</div>
+                </a>
+                
+                <a href="characters/cartel-guy/" class="team-member">
+                    <div class="member-avatar">🤐</div>
+                    <div class="member-name">Cartel Guy</div>
+                    <div class="member-title">Ambiguous</div>
+                </a>
+                
+                <a href="characters/mercury-incident/" class="team-member">
+                    <div class="member-avatar">☿️</div>
+                    <div class="member-name">Mercury Monday</div>
+                    <div class="member-title">The Origin</div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- TESTIMONIALS -->
+        <div class="section">
+            <h3 class="section-title">CLIENT TESTIMONIALS</h3>
+            <div class="testimonial">
+                "They found me military-grade equipment I didn't know existed. Questions? None asked. Would use again." 
+                <div class="testimonial-author">— Anonymous, 2022</div>
+            </div>
+            <div class="testimonial">
+                "Discreet. Professional. Scary good at what they do." 
+                <div class="testimonial-author">— Unnamed Government Official</div>
+            </div>
+            <div class="testimonial">
+                "No idea how they did it. Don't want to know. 10/10 would recommend." 
+                <div class="testimonial-author">— Satisfied Customer</div>
+            </div>
+        </div>
+        
+        <!-- DISCLAIMER -->
+        <div class="disclaimer">
+            <strong>DISCLAIMER:</strong> Public Source Specialist Inc. operates within all applicable local, state, and federal regulations. All materials sourced through government liquidation, public auctions, and lawful acquisition channels. Any appearance otherwise is coincidental.
+        </div>
+        
+        <!-- CONTACT -->
+        <div class="section">
+            <h3 class="section-title">HOW TO REACH US</h3>
+            <div class="subsection">
+                <p><strong>Call:</strong> Three days. We'll call back.</p>
+                <p><strong>Email:</strong> We don't have email.</p>
+                <p><strong>Visit:</strong> Don't. We'll find you.</p>
+                <p><strong>Walk-Ins:</strong> Not recommended.</p>
+            </div>
         </div>
     </div>
     
     <!-- FOOTER -->
     <div class="footer">
-        Public Source Specialist Inc. | Since 1987 | If It Exists, We Know A Guy
-        <br>
-        <span style="color: #555; font-size: 11px; margin-top: 15px; display: block;">No questions asked. No records kept. No regrets.</span>
+        <p><strong>PUBLIC SOURCE SPECIALIST INC.</strong></p>
+        <p>If It Exists, We Know A Guy</p>
+        <p style="margin-top: 15px; color: #444;">No questions asked. No records kept. No regrets. | Est. 1987</p>
     </div>
 </body>
 </html>
