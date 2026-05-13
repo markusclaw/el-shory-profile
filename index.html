@@ -201,6 +201,94 @@
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
         
+        .network-section {
+            margin-top: 100px;
+        }
+        
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .network-card {
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .network-avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s ease;
+        }
+        
+        .network-card:hover .network-avatar {
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+        
+        .network-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 8px;
+        }
+        
+        .network-tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 12px 16px;
+            border-radius: 6px;
+            white-space: nowrap;
+            font-size: 11px;
+            color: #ccc;
+            z-index: 10;
+        }
+        
+        .network-card:hover .network-tooltip {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(-15px);
+        }
+        
+        .tooltip-row {
+            margin: 4px 0;
+        }
+        
+        .tooltip-label {
+            color: #888;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .tooltip-value {
+            color: #e0e0e0;
+            font-weight: 600;
+        }
+        
         .footer {
             background: rgba(0, 0, 0, 0.5);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -503,11 +591,113 @@
         </div>
     </div>
     
+    <!-- CHARACTER NETWORK -->
+    <div class="content-section network-section">
+        <h2 class="section-title">Known Associates</h2>
+        <div class="network-grid">
+            <!-- El Shory (from Pecas view) -->
+            <div class="network-card" onclick="navigateTo('el-shory')">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
+                </div>
+                <div class="network-avatar" style="background-image: url('portrait.jpg');"></div>
+                <div class="network-name">El Shory</div>
+            </div>
+            
+            <!-- Pecas (from Shory view) -->
+            <div class="network-card" onclick="navigateTo('el-pecas')">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
+                </div>
+                <div class="network-avatar" style="background-image: url('pecas.jpg');"></div>
+                <div class="network-name">El Pecas</div>
+            </div>
+            
+            <!-- Shory's Mom -->
+            <div class="network-card" onclick="navigateTo('shory-mom')">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">2019</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Concerned</span></div>
+                </div>
+                <div class="network-avatar">👩</div>
+                <div class="network-name">Shory's Mom</div>
+            </div>
+            
+            <!-- The Mayor -->
+            <div class="network-card" onclick="navigateTo('the-mayor')">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1994</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Cover-Up Artist</span></div>
+                </div>
+                <div class="network-avatar">🎩</div>
+                <div class="network-name">The Mayor</div>
+            </div>
+            
+            <!-- Factory Foreman -->
+            <div class="network-card" onclick="navigateTo('factory-foreman')">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1987</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Whistleblower</span></div>
+                </div>
+                <div class="network-avatar">👷</div>
+                <div class="network-name">Factory Foreman</div>
+            </div>
+            
+            <!-- El Güero Mercury -->
+            <div class="network-card" onclick="navigateTo('el-guero-mercury')">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Unclassified</span></div>
+                </div>
+                <div class="network-avatar">⚗️</div>
+                <div class="network-name">El Güero Mercury</div>
+            </div>
+            
+            <!-- The Van Owner -->
+            <div class="network-card" onclick="navigateTo('van-owner')">
+                <div class="network-tooltip">
+                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Mystery</span></div>
+                </div>
+                <div class="network-avatar">🚐</div>
+                <div class="network-name">Van Owner</div>
+            </div>
+        </div>
+    </div>
+    
     <!-- FOOTER -->
     <div class="footer">
         Character Profiles Compiled 2026 | Status: At Large | Last Confirmed: Unknown
         <br>
         El Shory talks. El Pecas listens. Together, they move through the borderlands like ghosts in a white van.
+        <br><br>
+        <span style="color: #555; font-size: 11px;">Explore the network. Follow the threads. Every name leads somewhere.</span>
     </div>
+    
+    <script>
+        function navigateTo(character) {
+            const profiles = {
+                'el-shory': '#shory',
+                'el-pecas': '#pecas',
+                'shory-mom': '/characters/shory-mom',
+                'the-mayor': '/characters/mayor',
+                'factory-foreman': '/characters/factory-foreman',
+                'el-guero-mercury': '/characters/el-guero-mercury',
+                'van-owner': '/characters/van-owner'
+            };
+            
+            const target = profiles[character];
+            if (target && target.startsWith('#')) {
+                // Scroll to section on same page
+                const section = document.querySelector('h1');
+                if (section) section.scrollIntoView({ behavior: 'smooth' });
+            } else if (target) {
+                // Navigate to new profile
+                window.location.href = target;
+            }
+        }
+    </script>
 </body>
 </html>
