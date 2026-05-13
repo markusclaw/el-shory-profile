@@ -3,101 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL SHORY & EL PECAS - Character Profiles</title>
-    <meta property="og:title" content="EL SHORY - Character Profile">
-    <meta property="og:description" content="Jorge 'El Shory' Shortinez Hernández-Reyes. Material Acquisition Specialist. Mercury Survivor. The story exists at the intersection of myth and reality.">
-    <meta property="og:image" content="https://markusclaw.github.io/el-shory-profile/portrait.jpg">
+    <title>PUBLIC SOURCE SPECIALIST INC. - We Find What You Need</title>
+    <meta property="og:title" content="PUBLIC SOURCE SPECIALIST INC.">
+    <meta property="og:description" content="Need something? We find it. Government equipment. Military surplus. Industrial salvage. No questions asked.">
     <meta property="og:url" content="https://markusclaw.github.io/el-shory-profile/">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://markusclaw.github.io/el-shory-profile/portrait.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0f0f0f; color: #e0e0e0; font-family: 'Inter', sans-serif; line-height: 1.6; }
+        
+        .header {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 60px;
         }
         
-        body {
-            background: #0f0f0f;
-            color: #e0e0e0;
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            padding: 0;
-        }
-        
-        .hero-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            padding: 80px 60px;
+        .header-content {
             max-width: 1400px;
             margin: 0 auto;
-            align-items: center;
         }
         
-        .hero-image {
-            width: 100%;
-            aspect-ratio: 1;
-            background: url('portrait.jpg') center/cover no-repeat;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-        }
-        
-        .hero-text h1 {
+        .company-name {
             font-family: 'Playfair Display', serif;
-            font-size: 64px;
+            font-size: 48px;
             font-weight: 800;
-            margin-bottom: 20px;
             color: #fff;
-            line-height: 1.1;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
         }
         
-        .hero-text .subtitle {
+        .tagline {
             font-size: 18px;
             color: #999;
             font-weight: 500;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .hero-text p {
+        .hero-section {
+            padding: 80px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .hero-section p {
             font-size: 16px;
             color: #ccc;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .stat-card {
-            background: rgba(255, 255, 255, 0.05);
+        .services {
+            background: rgba(255, 255, 255, 0.03);
             padding: 20px;
             border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            margin-top: 30px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
         
-        .stat-label {
-            font-size: 12px;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
+        .services p {
+            font-size: 14px;
+            color: #999;
+            margin: 0;
         }
         
-        .stat-value {
-            font-size: 18px;
-            color: #fff;
-            font-weight: 600;
+        .services strong {
+            color: #e0e0e0;
         }
         
         .content-section {
@@ -116,113 +100,37 @@
             border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         }
         
-        .section-grid {
+        .team-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             margin-bottom: 60px;
         }
         
-        .section-grid-full {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-        
-        .content-block {
+        .team-card {
             background: rgba(255, 255, 255, 0.03);
             padding: 30px;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        
-        .content-block h3 {
-            font-size: 16px;
-            color: #fff;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-        
-        .content-block ul {
-            list-style: none;
-            margin-bottom: 0;
-        }
-        
-        .content-block li {
-            padding: 8px 0;
-            color: #ccc;
-            font-size: 14px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .content-block li:last-child {
-            border-bottom: none;
-        }
-        
-        .quote-section {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-            padding: 40px;
-            border-radius: 8px;
-            border-left: 4px solid rgba(255, 255, 255, 0.2);
-            margin-bottom: 40px;
-        }
-        
-        .quote-text {
-            font-size: 18px;
-            color: #e0e0e0;
-            font-style: italic;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-        
-        .quote-attribution {
-            font-size: 12px;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .tag-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0;
-        }
-        
-        .tag {
-            background: rgba(255, 255, 255, 0.1);
-            color: #e0e0e0;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        
-        .network-section {
-            margin-top: 100px;
-        }
-        
-        .network-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .network-card {
-            position: relative;
-            cursor: pointer;
             text-align: center;
             transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
-        .network-avatar {
+        .team-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .team-avatar {
             width: 120px;
             height: 120px;
-            margin: 0 auto 15px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.08);
             border: 2px solid rgba(255, 255, 255, 0.15);
@@ -233,60 +141,54 @@
             overflow: hidden;
             background-size: cover;
             background-position: center;
-            transition: all 0.3s ease;
+            margin-bottom: 20px;
         }
         
-        .network-card:hover .network-avatar {
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
-            transform: scale(1.05);
-        }
-        
-        .network-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: #e0e0e0;
+        .team-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
             margin-bottom: 8px;
         }
         
-        .network-tooltip {
-            position: absolute;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-10px);
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.3s ease;
-            background: rgba(0, 0, 0, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 12px 16px;
-            border-radius: 6px;
-            white-space: nowrap;
-            font-size: 11px;
-            color: #ccc;
-            z-index: 10;
-        }
-        
-        .network-card:hover .network-tooltip {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateX(-50%) translateY(-15px);
-        }
-        
-        .tooltip-row {
-            margin: 4px 0;
-        }
-        
-        .tooltip-label {
+        .team-title {
+            font-size: 12px;
             color: #888;
-            font-size: 10px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
         
-        .tooltip-value {
-            color: #e0e0e0;
-            font-weight: 600;
+        .about-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 60px;
+        }
+        
+        .about-section h3 {
+            font-size: 18px;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .about-section p {
+            font-size: 15px;
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .about-section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .about-section li {
+            padding: 8px 0;
+            color: #ccc;
+            font-size: 14px;
         }
         
         .footer {
@@ -301,391 +203,130 @@
         }
         
         @media (max-width: 1024px) {
-            .hero-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 60px 40px;
-            }
-            
-            .hero-text h1 {
-                font-size: 48px;
-            }
-            
-            .section-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .content-section {
-                padding: 0 40px;
-            }
+            .header { padding: 30px 40px; }
+            .company-name { font-size: 36px; }
+            .hero-section { padding: 60px 40px; }
+            .hero-section h2 { font-size: 36px; }
+            .content-section { padding: 0 40px; }
+            .team-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+            .team-avatar { width: 100px; height: 100px; font-size: 36px; }
         }
         
         @media (max-width: 640px) {
-            .hero-section {
-                padding: 40px 20px;
-            }
-            
-            .hero-text h1 {
-                font-size: 36px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .section-title {
-                font-size: 32px;
-            }
-            
-            .content-section {
-                padding: 0 20px;
-            }
+            .header { padding: 20px; }
+            .company-name { font-size: 28px; }
+            .hero-section { padding: 40px 20px; }
+            .hero-section h2 { font-size: 28px; }
+            .content-section { padding: 0 20px; }
+            .team-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- HERO SECTION -->
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-content">
+            <div class="company-name">PUBLIC SOURCE SPECIALIST INC.</div>
+            <div class="tagline">If It Exists, We Know A Guy</div>
+        </div>
+    </div>
+    
+    <!-- HERO -->
     <section class="hero-section">
-        <div class="hero-image" style="background-image: url('portrait.jpg');"></div>
-        <div class="hero-text">
-            <div class="subtitle">Part One: The Finder</div>
-            <h1>El Shory</h1>
-            <p>Nobody knows his real name. Nobody knows where he came from. All anyone knows is: call El Shory when you need something. Government equipment. Classified hardware. Military surplus. Industrial salvage. Anything. El Shory finds it. Nobody knows where. Nobody asks how. The van shows up, the item is there, and somehow the price is always reasonable. He doesn't sell things—he *locates* them. Impossibly. Consistently. Mysteriously.</p>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-label">Age</div>
-                    <div class="stat-value">34–57</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">Location</div>
-                    <div class="stat-value">Border Region</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">Status</div>
-                    <div class="stat-value">At Large</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-label">Threat Level</div>
-                    <div class="stat-value">Unclassified</div>
-                </div>
-            </div>
+        <h2>We Find What You Need</h2>
+        <p>Government equipment. Military surplus. Industrial salvage. Decommissioned technology. Whatever you're looking for — classified, rare, or supposedly impossible — we have connections.</p>
+        <div class="services">
+            <p><strong>Specializing in:</strong> Material acquisition • Equipment sourcing • Public-source procurement • Logistics & delivery</p>
         </div>
     </section>
     
-    <!-- BACKGROUND -->
+    <!-- ABOUT -->
     <div class="content-section">
-        <h2 class="section-title">Origin</h2>
-        
-        <div class="quote-section">
-            <div class="quote-text">"La vida no se trata de hacer dinero... se trata de sobrevivir suficiente tiempo para contar la historia."</div>
-            <div class="quote-attribution">— El Shory</div>
-        </div>
-        
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>The Mercury Incident of '87</h3>
-                <p>At fourteen, El Shory found work at a chemical processing plant in an unnamed industrial border town. The facility's motto was simple: "Safety Third."</p>
-                <p style="margin-top: 12px;">Three weeks into the job came what locals call Mercury Monday—an industrial "ventilation irregularity" that would reshape his life. Official records describe it as minor. Residents tell a different story: the day the pigeons forgot how to fly.</p>
-                <p style="margin-top: 12px;">What happened next is documented only in whispers. Subcutaneous mercury contamination. Thyroid complications. A resistance to tetanus that shouldn't exist. The corn stopped growing correctly. Everyone in the region developed something—a sickness without a name. The mayor buried the reports before re-election.</p>
-                <p style="margin-top: 12px;">None of it was ever officially proven. Which is exactly why people believe it.</p>
-            </div>
+        <h2 class="section-title">About Us</h2>
+        <div class="about-section">
+            <h3>Our History</h3>
+            <p>Public Source Specialist Inc. was founded on a simple principle: if something exists in the world, it can be found. For decades, we've sourced materials from government liquidations, industrial auctions, decommissioned facilities, and a network of suppliers most people don't know exist.</p>
+            <p>We don't ask questions. We don't offer paperwork. We find what you need, deliver it to your specifications, and move on.</p>
+            <h3 style="margin-top: 20px;">Our Network</h3>
+            <p>PSS Inc. operates through a carefully cultivated network of specialists, contacts, and individuals who understand the value of discretion.</p>
         </div>
     </div>
     
-    <!-- CHARACTERISTICS -->
+    <!-- TEAM -->
     <div class="content-section">
-        <h2 class="section-title">Physical Profile</h2>
-        <div class="section-grid">
-            <div class="content-block">
-                <h3>Distinctive Features</h3>
-                <ul>
-                    <li>Permanent limp on left leg ("from baseball")</li>
-                    <li>Left hand semi-closed from "the factory accident"</li>
-                    <li>Raspy voice—claims secondhand smoke damage</li>
-                    <li>Smells of WD-40, carne asada, mystery solvents</li>
-                    <li>Tattoo: "'87" and "Mercury Monday" on chest</li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h3>Standard Appearance</h3>
-                <ul>
-                    <li>Sleeveless shirts (faded, stained)</li>
-                    <li>Faded jeans, worn boots with uneven soles</li>
-                    <li>Cap that says "SIN PLACAS" (always)</li>
-                    <li>Chain necklace — nobody knows what it holds</li>
-                    <li>Expression: "I already found what you're looking for"</li>
-                    <li>Always has phone (always ringing, always answering)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <!-- OCCUPATION -->
-    <div class="content-section">
-        <h2 class="section-title">The Finder</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>How It Works (Nobody Knows)</h3>
-                <p style="margin-bottom: 15px;">You call El Shory. You tell him what you need. "I need a military-grade signal jammer." "I need decommissioned lab equipment." "I need industrial robotics firmware." </p>
-                <p style="margin-bottom: 15px;">He nods. Maybe says "Simón" if Pecas is there. Doesn't ask questions. Doesn't explain. Three days later, it appears. Exactly what you asked for. Working condition. No documentation. No questions asked. No receipt.</p>
-                <p style="margin-bottom: 15px;"><strong>The mystery:</strong> Where does it come from? Government auctions? Seized equipment? Black market connections? Literal theft? He will never say. You will never know. It simply... exists in his possession, and now it can be yours.</p>
-                <p style="margin-bottom: 15px;">His business card reads: "If it exists, I know a guy." (The guy is him.)</p>
-            </div>
-        </div>
-        
-        <h3 style="font-size: 18px; color: #fff; margin-top: 40px; margin-bottom: 20px;">Documented Acquisitions</h3>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>Things El Shory Has "Found":</h3>
-                <ul>
-                    <li>Decommissioned military communications equipment (origin unknown)</li>
-                    <li>Industrial robotics components (source unverified)</li>
-                    <li>Classified government hardware (definitely unethical)</li>
-                    <li>Medical-grade machinery (somehow functional)</li>
-                    <li>Semiconductor manufacturing tools (illegality suspected)</li>
-                    <li>Encrypted data servers (questions best not asked)</li>
-                </ul>
-                <p style="margin-top: 20px;"><strong>The joke:</strong> He doesn't steal. He doesn't smuggle. He simply has an inexplicable ability to locate items that should not be locatable. Is it miraculous? Is it criminal? Is it both? El Shory will never clarify.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- EL PECAS CHARACTER SECTION -->
-    <section style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.02) 100%); padding: 100px 0; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="hero-section" style="padding-top: 40px;">
-            <div class="hero-image" style="background-image: url('pecas.jpg');"></div>
-            <div class="hero-text">
-                <div class="subtitle">Accomplice</div>
-                <h1>El Pecas</h1>
-                <p>The silent companion. The man with the freckles, the deadpan stare, and the inexplicable loyalty. El Pecas speaks in nods, sunflower seeds, and the single word "Simón." Yet somehow, in his quiet presence, more is understood than in a thousand explanations. Where El Shory talks, Pecas listens. Where Shory gestures, Pecas acts. He is the counterweight to chaos.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-label">Age</div>
-                        <div class="stat-value">Unknown</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Known For</div>
-                        <div class="stat-value">Silence</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Language</div>
-                        <div class="stat-value">Nods & Seeds</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Threat Level</div>
-                        <div class="stat-value">Unspoken</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- PECAS PROFILE -->
-    <div class="content-section">
-        <h2 class="section-title">The Silent Partner</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>Communication Method</h3>
-                <p>El Pecas is a man of few (if any) words. His vocabulary consists of:</p>
-                <ul style="margin-top: 12px;">
-                    <li><strong>Nodding</strong> — Agreement, acknowledgment, understanding</li>
-                    <li><strong>Sunflower seeds</strong> — Contemplation, patience, presence</li>
-                    <li><strong>"Simón"</strong> — Affirmation, solidarity, "I'm here"</li>
-                </ul>
-                <p style="margin-top: 15px;">Yet people listen to him more than they listen to most who speak.</p>
-            </div>
-        </div>
-        
-        <h3 style="font-size: 18px; color: #fff; margin-top: 40px; margin-bottom: 20px;">Physical Profile</h3>
-        <div class="section-grid">
-            <div class="content-block">
-                <h3>Appearance</h3>
-                <ul>
-                    <li>Freckles across face (hence the alias)</li>
-                    <li>"PECAS" tattoo on neck</li>
-                    <li>Gold chain necklace</li>
-                    <li>Black shirt (always El Shory branded)</li>
-                    <li>Deadpan, knowing expression</li>
-                    <li>Digital watch (black, utilitarian)</li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h3>Relationship to El Shory</h3>
-                <p>Inseparable. Where one goes, the other follows. El Shory talks, El Pecas nods. El Shory philosophizes, El Pecas understands. The dynamic is unspoken but absolute—a partnership of opposites that somehow functions as a single unit.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- ASSOCIATIONS -->
-    <div class="content-section">
-        <h2 class="section-title">The White Van</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>1998 Chevy Astro</h3>
-                <p style="margin-bottom: 12px;">The mobile headquarters. No plates. One mismatched door. Passenger window non-functional. Rear suspension that squeaks like tortured dolphins. Somehow always already parked at the destination before they arrive.</p>
-                <p style="margin-bottom: 12px;"><strong>Critical anomaly:</strong> Nobody has ever witnessed El Shory or El Pecas purchase fuel. Yet the van runs. Where does it get gas? How does it move? These are questions best left unasked.</p>
-                <p style="margin-top: 12px; font-style: italic; color: #999;">"PUBLIC SOURCE SPECIALIST" — painted on the side</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- PERSONALITY & BEHAVIOR -->
-    <div class="content-section">
-        <h2 class="section-title">The Mystery</h2>
-        <div class="section-grid">
-            <div class="content-block">
-                <h3>Personality</h3>
-                <ul>
-                    <li>Unnervingly calm about the impossible</li>
-                    <li>Never explains his methods</li>
-                    <li>Never justifies his sources</li>
-                    <li>Never apologizes for ethics</li>
-                    <li>Always delivers exactly what you asked for</li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h3>The Real Question</h3>
-                <p>Is El Shory a criminal? A savant? A connected insider? Nobody knows. He simply exists in the space between legal and illegal, ethical and unethical, possible and impossible. And he always—<em>always</em>—finds what you need.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- RECORDED STATEMENTS -->
-    <div class="content-section">
-        <h2 class="section-title">When Asked Direct Questions</h2>
-        <div class="section-grid-full">
-            <div class="quote-section">
-                <div class="quote-text">"Where does it come from?"</div>
-                <div class="quote-attribution" style="margin-top: 8px;">El Shory: <em>[nods]</em></div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"How did you find this?"</div>
-                <div class="quote-attribution" style="margin-top: 8px;">El Shory: <em>[adjusts cap]</em> "Connections."</div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"Is this... legal?"</div>
-                <div class="quote-attribution" style="margin-top: 8px;">El Shory: "Does it matter?" <em>[It does. But he won't say.]</em></div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"How much?"</div>
-                <div class="quote-attribution" style="margin-top: 8px;">El Shory: [quotes a price that is somehow always fair] "Take it or leave it."</div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"Can you get...?"</div>
-                <div class="quote-attribution" style="margin-top: 8px;">El Shory: "Probably. Give me three days."</div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- RUMORS & LORE -->
-    <div class="content-section">
-        <h2 class="section-title">The Questions Nobody Dares Ask</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>How Does He Do It?</h3>
-                <ul>
-                    <li>Has a contact at every military base in three states</li>
-                    <li>Knows someone at every seized-property auction</li>
-                    <li>Has a pipeline into government liquidation sales</li>
-                    <li>Somehow accesses decommissioned equipment before it's officially decommissioned</li>
-                    <li>Has connections in customs, border patrol, DHS (unconfirmed)</li>
-                    <li>Once sourced items that technically don't exist yet</li>
-                    <li>Has been known to locate items that were reported stolen (by him?)</li>
-                    <li>The white van has been seen in places he wasn't supposed to be</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <!-- CHARACTER NETWORK -->
-    <div class="content-section network-section">
-        <h2 class="section-title">Known Associates</h2>
-        <div class="network-grid">
-            <a href="characters/el-shory/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
-                </div>
-                <div class="network-avatar" style="background-image: url('portrait.jpg');"></div>
-                <div class="network-name">El Shory</div>
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-grid">
+            <a href="characters/el-shory/" class="team-card">
+                <div class="team-avatar" style="background-image: url('portrait.jpg');"></div>
+                <div class="team-name">El Shory</div>
+                <div class="team-title">Founder & Chief Finder</div>
             </a>
             
-            <a href="characters/el-pecas/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
-                </div>
-                <div class="network-avatar" style="background-image: url('pecas.jpg');"></div>
-                <div class="network-name">El Pecas</div>
+            <a href="characters/el-pecas/" class="team-card">
+                <div class="team-avatar" style="background-image: url('pecas.jpg');"></div>
+                <div class="team-name">El Pecas</div>
+                <div class="team-title">Operations Partner</div>
             </a>
             
-            <a href="characters/shory-mom/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">2019</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Concerned</span></div>
-                </div>
-                <div class="network-avatar">👩</div>
-                <div class="network-name">Shory's Mom</div>
+            <a href="characters/el-guero-mercury/" class="team-card">
+                <div class="team-avatar">⚗️</div>
+                <div class="team-name">El Güero Mercury</div>
+                <div class="team-title">Supply Chain</div>
             </a>
             
-            <a href="characters/mayor/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1994</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Cover-Up Artist</span></div>
-                </div>
-                <div class="network-avatar">🎩</div>
-                <div class="network-name">The Mayor</div>
+            <a href="characters/shory-mom/" class="team-card">
+                <div class="team-avatar">👩</div>
+                <div class="team-name">Shory's Mom</div>
+                <div class="team-title">Family</div>
             </a>
             
-            <a href="characters/factory-foreman/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1987</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Whistleblower</span></div>
-                </div>
-                <div class="network-avatar">👷</div>
-                <div class="network-name">Factory Foreman</div>
+            <a href="characters/factory-foreman/" class="team-card">
+                <div class="team-avatar">👷</div>
+                <div class="team-name">Factory Foreman</div>
+                <div class="team-title">Historical Connection</div>
             </a>
             
-            <a href="characters/el-guero-mercury/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Unclassified</span></div>
-                </div>
-                <div class="network-avatar">⚗️</div>
-                <div class="network-name">El Güero Mercury</div>
+            <a href="characters/mayor/" class="team-card">
+                <div class="team-avatar">🎩</div>
+                <div class="team-name">The Mayor</div>
+                <div class="team-title">Government Relations</div>
             </a>
             
-            <a href="characters/van-owner/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Mystery</span></div>
-                </div>
-                <div class="network-avatar">🚐</div>
-                <div class="network-name">Van Owner</div>
+            <a href="characters/crooked-cop/" class="team-card">
+                <div class="team-avatar">👮</div>
+                <div class="team-name">Crooked Cop</div>
+                <div class="team-title">Enforcement</div>
             </a>
             
-            <a href="characters/mercury-incident/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">When:</span> <span class="tooltip-value">1987 (?)</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Unverified</span></div>
-                </div>
-                <div class="network-avatar">☿️</div>
-                <div class="network-name">Mercury Monday</div>
+            <a href="characters/cartel-guy/" class="team-card">
+                <div class="team-avatar">🤐</div>
+                <div class="team-name">Cartel Guy</div>
+                <div class="team-title">Ambiguous</div>
             </a>
+            
+            <a href="characters/mercury-incident/" class="team-card">
+                <div class="team-avatar">☿️</div>
+                <div class="team-name">Mercury Monday</div>
+                <div class="team-title">The Origin</div>
+            </a>
+        </div>
+    </div>
+    
+    <!-- LORE -->
+    <div class="content-section">
+        <h2 class="section-title">Our Origins</h2>
+        <div class="about-section">
+            <h3>The Mercury Incident</h3>
+            <p>PSS Inc.'s founding is inextricably linked to events that occurred in the late 1980s — a period we refer to internally as "Mercury Monday." Details remain classified and contested, but what is known: materials moved through the supply chain that shouldn't have, people were affected, and the company emerged from the ashes of that incident.</p>
+            <p>We don't discuss it publicly. But the incident shaped who we are and what we do.</p>
         </div>
     </div>
     
     <!-- FOOTER -->
     <div class="footer">
-        Character Profiles Compiled 2026 | Status: At Large | Last Confirmed: Unknown
+        Public Source Specialist Inc. | Since 1987 | If It Exists, We Know A Guy
         <br>
-        El Shory talks. El Pecas listens. Together, they move through the borderlands like ghosts in a white van.
-        <br><br>
-        <span style="color: #555; font-size: 11px;">Explore the network. Follow the threads. Every name leads somewhere.</span>
+        <span style="color: #555; font-size: 11px; margin-top: 15px; display: block;">No questions asked. No records kept. No regrets.</span>
     </div>
-    
-
 </body>
 </html>
