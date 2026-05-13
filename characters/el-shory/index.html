@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL SHORY & EL PECAS - Character Profiles</title>
-    <meta property="og:title" content="EL SHORY - Character Profile">
-    <meta property="og:description" content="Jorge 'El Shory' Shortinez Hernández-Reyes. Material Acquisition Specialist. Mercury Survivor. The story exists at the intersection of myth and reality.">
+    <title>EL SHORY - Material Acquisition Specialist</title>
+    <meta property="og:title" content="EL SHORY - Material Acquisition Specialist">
+    <meta property="og:description" content="Jorge 'El Shory' Shortinez Hernández-Reyes. Survivor of the Mercury Incident. Where myth meets reality. Available now in an interconnected universe of characters.">
     <meta property="og:image" content="https://markusclaw.github.io/el-shory-profile/portrait.jpg">
-    <meta property="og:url" content="https://markusclaw.github.io/el-shory-profile/">
+    <meta property="og:url" content="https://markusclaw.github.io/el-shory-profile/characters/el-shory/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://markusclaw.github.io/el-shory-profile/portrait.jpg">
@@ -27,6 +27,31 @@
             padding: 0;
         }
         
+        .nav-breadcrumb {
+            padding: 20px 60px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .nav-breadcrumb a {
+            color: #888;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-breadcrumb a:hover {
+            color: #e0e0e0;
+        }
+        
+        .nav-breadcrumb span {
+            color: #555;
+            margin: 0 8px;
+        }
+        
         .hero-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -40,7 +65,7 @@
         .hero-image {
             width: 100%;
             aspect-ratio: 1;
-            background: url('portrait.jpg') center/cover no-repeat;
+            background: url('../../portrait.jpg') center/cover no-repeat;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
@@ -184,23 +209,6 @@
             letter-spacing: 1px;
         }
         
-        .tag-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0;
-        }
-        
-        .tag {
-            background: rgba(255, 255, 255, 0.1);
-            color: #e0e0e0;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        
         .network-section {
             margin-top: 100px;
         }
@@ -340,15 +348,31 @@
             .content-section {
                 padding: 0 20px;
             }
+            
+            .network-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 20px;
+            }
+            
+            .network-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- BREADCRUMB NAV -->
+    <div class="nav-breadcrumb">
+        <a href="../../">← Back to Universe</a>
+    </div>
+    
     <!-- HERO SECTION -->
     <section class="hero-section">
-        <div class="hero-image" style="background-image: url('portrait.jpg');"></div>
+        <div class="hero-image"></div>
         <div class="hero-text">
-            <div class="subtitle">Part One: The Talker</div>
+            <div class="subtitle">Character Profile</div>
             <h1>El Shory</h1>
             <p>Jorge "El Shory" Shortinez Hernández-Reyes is a figure of legend in the industrial borderlands. A survivor of the Mercury Incident of '87, material acquisition specialist, and keeper of forgotten truths. His story exists at the intersection of myth and reality—a man whose past is written in scars and whose present is a rolling white van filled with salvage and secrets.</p>
             
@@ -449,86 +473,6 @@
         </div>
     </div>
     
-    <!-- EL PECAS CHARACTER SECTION -->
-    <section style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.02) 100%); padding: 100px 0; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="hero-section" style="padding-top: 40px;">
-            <div class="hero-image" style="background-image: url('pecas.jpg');"></div>
-            <div class="hero-text">
-                <div class="subtitle">Accomplice</div>
-                <h1>El Pecas</h1>
-                <p>The silent companion. The man with the freckles, the deadpan stare, and the inexplicable loyalty. El Pecas speaks in nods, sunflower seeds, and the single word "Simón." Yet somehow, in his quiet presence, more is understood than in a thousand explanations. Where El Shory talks, Pecas listens. Where Shory gestures, Pecas acts. He is the counterweight to chaos.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-label">Age</div>
-                        <div class="stat-value">Unknown</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Known For</div>
-                        <div class="stat-value">Silence</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Language</div>
-                        <div class="stat-value">Nods & Seeds</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Threat Level</div>
-                        <div class="stat-value">Unspoken</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- PECAS PROFILE -->
-    <div class="content-section">
-        <h2 class="section-title">The Silent Partner</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>Communication Method</h3>
-                <p>El Pecas is a man of few (if any) words. His vocabulary consists of:</p>
-                <ul style="margin-top: 12px;">
-                    <li><strong>Nodding</strong> — Agreement, acknowledgment, understanding</li>
-                    <li><strong>Sunflower seeds</strong> — Contemplation, patience, presence</li>
-                    <li><strong>"Simón"</strong> — Affirmation, solidarity, "I'm here"</li>
-                </ul>
-                <p style="margin-top: 15px;">Yet people listen to him more than they listen to most who speak.</p>
-            </div>
-        </div>
-        
-        <h3 style="font-size: 18px; color: #fff; margin-top: 40px; margin-bottom: 20px;">Physical Profile</h3>
-        <div class="section-grid">
-            <div class="content-block">
-                <h3>Appearance</h3>
-                <ul>
-                    <li>Freckles across face (hence the alias)</li>
-                    <li>"PECAS" tattoo on neck</li>
-                    <li>Gold chain necklace</li>
-                    <li>Black shirt (always El Shory branded)</li>
-                    <li>Deadpan, knowing expression</li>
-                    <li>Digital watch (black, utilitarian)</li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h3>Relationship to El Shory</h3>
-                <p>Inseparable. Where one goes, the other follows. El Shory talks, El Pecas nods. El Shory philosophizes, El Pecas understands. The dynamic is unspoken but absolute—a partnership of opposites that somehow functions as a single unit.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- ASSOCIATIONS -->
-    <div class="content-section">
-        <h2 class="section-title">The White Van</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>1998 Chevy Astro</h3>
-                <p style="margin-bottom: 12px;">The mobile headquarters. No plates. One mismatched door. Passenger window non-functional. Rear suspension that squeaks like tortured dolphins. Somehow always already parked at the destination before they arrive.</p>
-                <p style="margin-bottom: 12px;"><strong>Critical anomaly:</strong> Nobody has ever witnessed El Shory or El Pecas purchase fuel. Yet the van runs. Where does it get gas? How does it move? These are questions best left unasked.</p>
-                <p style="margin-top: 12px; font-style: italic; color: #999;">"PUBLIC SOURCE SPECIALIST" — painted on the side</p>
-            </div>
-        </div>
-    </div>
-    
     <!-- PERSONALITY & BEHAVIOR -->
     <div class="content-section">
         <h2 class="section-title">Profile</h2>
@@ -595,80 +539,73 @@
     <div class="content-section network-section">
         <h2 class="section-title">Known Associates</h2>
         <div class="network-grid">
-            <a href="characters/el-shory/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../el-pecas/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
                 </div>
-                <div class="network-avatar" style="background-image: url('portrait.jpg');"></div>
-                <div class="network-name">El Shory</div>
-            </a>
-            
-            <a href="characters/el-pecas/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
-                </div>
-                <div class="network-avatar" style="background-image: url('pecas.jpg');"></div>
+                <div class="network-avatar" style="background-image: url('../../pecas.jpg');"></div>
                 <div class="network-name">El Pecas</div>
-            </a>
+            </div>
             
-            <a href="characters/shory-mom/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../shory-mom/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">2019</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Concerned</span></div>
                 </div>
                 <div class="network-avatar">👩</div>
                 <div class="network-name">Shory's Mom</div>
-            </a>
+            </div>
             
-            <a href="characters/mayor/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../mayor/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1994</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Cover-Up Artist</span></div>
                 </div>
                 <div class="network-avatar">🎩</div>
                 <div class="network-name">The Mayor</div>
-            </a>
+            </div>
             
-            <a href="characters/factory-foreman/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../factory-foreman/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1987</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Whistleblower</span></div>
                 </div>
                 <div class="network-avatar">👷</div>
                 <div class="network-name">Factory Foreman</div>
-            </a>
+            </div>
             
-            <a href="characters/el-guero-mercury/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../el-guero-mercury/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Unclassified</span></div>
+                    <div class="tooltip-row"><span class="tooltip-label\">Threat:</span> <span class="tooltip-value">Unclassified</span></div>
                 </div>
                 <div class="network-avatar">⚗️</div>
                 <div class="network-name">El Güero Mercury</div>
-            </a>
+            </div>
             
-            <a href="characters/van-owner/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../van-owner/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Mystery</span></div>
                 </div>
                 <div class="network-avatar">🚐</div>
                 <div class="network-name">Van Owner</div>
-            </a>
+            </div>
         </div>
     </div>
     
     <!-- FOOTER -->
     <div class="footer">
-        Character Profiles Compiled 2026 | Status: At Large | Last Confirmed: Unknown
+        Character Profile Compiled 2026 | Status: At Large | Last Confirmed: Unknown
         <br>
-        El Shory talks. El Pecas listens. Together, they move through the borderlands like ghosts in a white van.
-        <br><br>
-        <span style="color: #555; font-size: 11px;">Explore the network. Follow the threads. Every name leads somewhere.</span>
+        <span style="color: #555; font-size: 11px; margin-top: 15px; display: block;">Explore the network. Follow the threads. Every name leads somewhere.</span>
     </div>
     
-
+    <script>
+        function navigateTo(path) {
+            window.location.href = path;
+        }
+    </script>
 </body>
 </html>

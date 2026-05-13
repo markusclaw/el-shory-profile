@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL SHORY & EL PECAS - Character Profiles</title>
-    <meta property="og:title" content="EL SHORY - Character Profile">
-    <meta property="og:description" content="Jorge 'El Shory' Shortinez Hernández-Reyes. Material Acquisition Specialist. Mercury Survivor. The story exists at the intersection of myth and reality.">
-    <meta property="og:image" content="https://markusclaw.github.io/el-shory-profile/portrait.jpg">
-    <meta property="og:url" content="https://markusclaw.github.io/el-shory-profile/">
+    <title>EL PECAS - The Silent Partner</title>
+    <meta property="og:title" content="EL PECAS - The Silent Partner">
+    <meta property="og:description" content="El Pecas. The man of few words. Freckles, gold chain, absolute loyalty. Where El Shory talks, Pecas nods. Part of an interconnected universe of characters.">
+    <meta property="og:image" content="https://markusclaw.github.io/el-shory-profile/pecas.jpg">
+    <meta property="og:url" content="https://markusclaw.github.io/el-shory-profile/characters/el-pecas/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://markusclaw.github.io/el-shory-profile/portrait.jpg">
+    <meta name="twitter:image" content="https://markusclaw.github.io/el-shory-profile/pecas.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -27,6 +27,31 @@
             padding: 0;
         }
         
+        .nav-breadcrumb {
+            padding: 20px 60px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .nav-breadcrumb a {
+            color: #888;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-breadcrumb a:hover {
+            color: #e0e0e0;
+        }
+        
+        .nav-breadcrumb span {
+            color: #555;
+            margin: 0 8px;
+        }
+        
         .hero-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -40,7 +65,7 @@
         .hero-image {
             width: 100%;
             aspect-ratio: 1;
-            background: url('portrait.jpg') center/cover no-repeat;
+            background: url('../../pecas.jpg') center/cover no-repeat;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
@@ -161,6 +186,11 @@
             border-bottom: none;
         }
         
+        .content-block p {
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        
         .quote-section {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
             padding: 40px;
@@ -182,23 +212,6 @@
             color: #888;
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-        
-        .tag-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0;
-        }
-        
-        .tag {
-            background: rgba(255, 255, 255, 0.1);
-            color: #e0e0e0;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-            border: 1px solid rgba(255, 255, 255, 0.15);
         }
         
         .network-section {
@@ -340,152 +353,61 @@
             .content-section {
                 padding: 0 20px;
             }
+            
+            .network-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 20px;
+            }
+            
+            .network-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 36px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- BREADCRUMB NAV -->
+    <div class="nav-breadcrumb">
+        <a href="../../">← Back to Universe</a>
+    </div>
+    
     <!-- HERO SECTION -->
     <section class="hero-section">
-        <div class="hero-image" style="background-image: url('portrait.jpg');"></div>
+        <div class="hero-image"></div>
         <div class="hero-text">
-            <div class="subtitle">Part One: The Talker</div>
-            <h1>El Shory</h1>
-            <p>Jorge "El Shory" Shortinez Hernández-Reyes is a figure of legend in the industrial borderlands. A survivor of the Mercury Incident of '87, material acquisition specialist, and keeper of forgotten truths. His story exists at the intersection of myth and reality—a man whose past is written in scars and whose present is a rolling white van filled with salvage and secrets.</p>
+            <div class="subtitle">The Silent Partner</div>
+            <h1>El Pecas</h1>
+            <p>The man with the freckles, the deadpan stare, and the inexplicable loyalty. El Pecas speaks in nods, sunflower seeds, and the single word "Simón." Yet somehow, in his quiet presence, more is understood than in a thousand explanations. Where El Shory talks, Pecas listens. Where Shory gestures, Pecas acts. He is the counterweight to chaos.</p>
             
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-label">Age</div>
-                    <div class="stat-value">34–57</div>
+                    <div class="stat-value">Unknown</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-label">Location</div>
-                    <div class="stat-value">Border Region</div>
+                    <div class="stat-label">Known For</div>
+                    <div class="stat-value">Silence</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-label">Status</div>
-                    <div class="stat-value">At Large</div>
+                    <div class="stat-label">Language</div>
+                    <div class="stat-value">Nods & Seeds</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-label">Threat Level</div>
-                    <div class="stat-value">Unclassified</div>
+                    <div class="stat-value">Unspoken</div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- BACKGROUND -->
+    <!-- COMMUNICATION METHOD -->
     <div class="content-section">
-        <h2 class="section-title">Origin</h2>
-        
-        <div class="quote-section">
-            <div class="quote-text">"La vida no se trata de hacer dinero... se trata de sobrevivir suficiente tiempo para contar la historia."</div>
-            <div class="quote-attribution">— El Shory</div>
-        </div>
-        
+        <h2 class="section-title">The Silent Language</h2>
         <div class="section-grid-full">
             <div class="content-block">
-                <h3>The Mercury Incident of '87</h3>
-                <p>At fourteen, El Shory found work at a chemical processing plant in an unnamed industrial border town. The facility's motto was simple: "Safety Third."</p>
-                <p style="margin-top: 12px;">Three weeks into the job came what locals call Mercury Monday—an industrial "ventilation irregularity" that would reshape his life. Official records describe it as minor. Residents tell a different story: the day the pigeons forgot how to fly.</p>
-                <p style="margin-top: 12px;">What happened next is documented only in whispers. Subcutaneous mercury contamination. Thyroid complications. A resistance to tetanus that shouldn't exist. The corn stopped growing correctly. Everyone in the region developed something—a sickness without a name. The mayor buried the reports before re-election.</p>
-                <p style="margin-top: 12px;">None of it was ever officially proven. Which is exactly why people believe it.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- CHARACTERISTICS -->
-    <div class="content-section">
-        <h2 class="section-title">Physical Profile</h2>
-        <div class="section-grid">
-            <div class="content-block">
-                <h3>Distinctive Features</h3>
-                <ul>
-                    <li>Permanent limp on left leg ("from baseball")</li>
-                    <li>Left hand semi-closed from "the factory accident"</li>
-                    <li>Raspy voice—claims secondhand smoke damage</li>
-                    <li>Smells of WD-40, carne asada, mystery solvents</li>
-                    <li>Tattoo: "'87" and "Mercury Monday" on chest</li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h3>Standard Appearance</h3>
-                <ul>
-                    <li>Sleeveless shirts (faded, stained)</li>
-                    <li>Faded jeans, worn boots with uneven soles</li>
-                    <li>Weathered cap ("SIN PLACAS")</li>
-                    <li>Chain necklace with mystery pendant</li>
-                    <li>Expression: perpetually understanding something no one else sees</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
-    <!-- OCCUPATION -->
-    <div class="content-section">
-        <h2 class="section-title">Enterprise</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>Material Acquisition Specialist</h3>
-                <p style="margin-bottom: 15px;">El Shory operates an independent procurement operation, specializing in what he calls "public-source materials." His business card reads simply: "If it exists, I know a guy."</p>
-                <h3 style="margin-top: 20px;">Specializations:</h3>
-                <ul>
-                    <li>Recycled metals and industrial salvage</li>
-                    <li>Surplus electronics and reclaimed components</li>
-                    <li>"Public-source" procurement (ethics unverified)</li>
-                    <li>Custom hardware assembly and integration</li>
-                </ul>
-            </div>
-        </div>
-        
-        <h3 style="font-size: 18px; color: #fff; margin-top: 40px; margin-bottom: 20px;">The Dongle Era</h3>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <p>In the underground hardware scene, El Shory rose to prominence manufacturing "Slave Dongles"—compact controller devices assembled from reclaimed aluminum, retired government hardware, abandoned USB hubs, and materials sourced from "public containers." When questioned about their legality, his response became legendary:</p>
-                <div class="quote-section" style="margin-top: 20px;">
-                    <div class="quote-text">"No es robado si nadie lo está usando."</div>
-                    <div class="quote-attribution">— On acquisition ethics</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- EL PECAS CHARACTER SECTION -->
-    <section style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.02) 100%); padding: 100px 0; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div class="hero-section" style="padding-top: 40px;">
-            <div class="hero-image" style="background-image: url('pecas.jpg');"></div>
-            <div class="hero-text">
-                <div class="subtitle">Accomplice</div>
-                <h1>El Pecas</h1>
-                <p>The silent companion. The man with the freckles, the deadpan stare, and the inexplicable loyalty. El Pecas speaks in nods, sunflower seeds, and the single word "Simón." Yet somehow, in his quiet presence, more is understood than in a thousand explanations. Where El Shory talks, Pecas listens. Where Shory gestures, Pecas acts. He is the counterweight to chaos.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-label">Age</div>
-                        <div class="stat-value">Unknown</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Known For</div>
-                        <div class="stat-value">Silence</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Language</div>
-                        <div class="stat-value">Nods & Seeds</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-label">Threat Level</div>
-                        <div class="stat-value">Unspoken</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- PECAS PROFILE -->
-    <div class="content-section">
-        <h2 class="section-title">The Silent Partner</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>Communication Method</h3>
+                <h3>How He Speaks</h3>
                 <p>El Pecas is a man of few (if any) words. His vocabulary consists of:</p>
                 <ul style="margin-top: 12px;">
                     <li><strong>Nodding</strong> — Agreement, acknowledgment, understanding</li>
@@ -495,8 +417,11 @@
                 <p style="margin-top: 15px;">Yet people listen to him more than they listen to most who speak.</p>
             </div>
         </div>
-        
-        <h3 style="font-size: 18px; color: #fff; margin-top: 40px; margin-bottom: 20px;">Physical Profile</h3>
+    </div>
+    
+    <!-- PHYSICAL PROFILE -->
+    <div class="content-section">
+        <h2 class="section-title">Physical Profile</h2>
         <div class="section-grid">
             <div class="content-block">
                 <h3>Appearance</h3>
@@ -516,7 +441,7 @@
         </div>
     </div>
     
-    <!-- ASSOCIATIONS -->
+    <!-- THE VAN -->
     <div class="content-section">
         <h2 class="section-title">The White Van</h2>
         <div class="section-grid-full">
@@ -529,146 +454,77 @@
         </div>
     </div>
     
-    <!-- PERSONALITY & BEHAVIOR -->
-    <div class="content-section">
-        <h2 class="section-title">Profile</h2>
-        <div class="section-grid">
-            <div class="content-block">
-                <h3>Personality Traits</h3>
-                <ul>
-                    <li>Strangely philosophical</li>
-                    <li>Unintentionally inspirational</li>
-                    <li>Highly conspiratorial</li>
-                    <li>Emotionally sincere beneath layers of absurdity</li>
-                    <li>Absolute confidence in contradictory narratives</li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h3>Speech Pattern</h3>
-                <p>Speaks like a retired mechanic, conspiracy podcast host, and your tío after three Modelos. Stories flow with impossible physics and invented details. Yet somehow, people listen.</p>
-            </div>
-        </div>
-    </div>
-    
-    <!-- RECORDED STATEMENTS -->
-    <div class="content-section">
-        <h2 class="section-title">In His Own Words</h2>
-        <div class="section-grid-full">
-            <div class="quote-section">
-                <div class="quote-text">"El problema no es el mercurio... es que nadie pregunta POR QUÉ había tanto mercurio."</div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"Las tiroides no fallan solas, compa."</div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"Todo está conectado. Full circle."</div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"Eso viene desde arriba."</div>
-            </div>
-            <div class="quote-section">
-                <div class="quote-text">"El maíz ya no crece igual desde el '87."</div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- RUMORS & LORE -->
-    <div class="content-section">
-        <h2 class="section-title">Lore</h2>
-        <div class="section-grid-full">
-            <div class="content-block">
-                <h3>Unverified Reports</h3>
-                <ul>
-                    <li>Disappeared for six months living behind an abandoned tire shop</li>
-                    <li>Can identify metal grades by smell</li>
-                    <li>Possesses mental maps of every abandoned warehouse in the region</li>
-                    <li>Survived two years exclusively on gas station burritos</li>
-                    <li>Local news once interviewed him; footage subsequently vanished</li>
-                    <li>Claims to have an uncle in every city (unconfirmed)</li>
-                    <li>Has never been photographed, only illustrated</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
     <!-- CHARACTER NETWORK -->
     <div class="content-section network-section">
         <h2 class="section-title">Known Associates</h2>
         <div class="network-grid">
-            <a href="characters/el-shory/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../el-shory/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
                 </div>
-                <div class="network-avatar" style="background-image: url('portrait.jpg');"></div>
+                <div class="network-avatar" style="background-image: url('../../portrait.jpg');"></div>
                 <div class="network-name">El Shory</div>
-            </a>
+            </div>
             
-            <a href="characters/el-pecas/" class="network-card" style="text-decoration: none; color: inherit;">
-                <div class="network-tooltip">
-                    <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Now</span></div>
-                    <div class="tooltip-row"><span class="tooltip-label">Status:</span> <span class="tooltip-value">Active</span></div>
-                </div>
-                <div class="network-avatar" style="background-image: url('pecas.jpg');"></div>
-                <div class="network-name">El Pecas</div>
-            </a>
-            
-            <a href="characters/shory-mom/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../shory-mom/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">2019</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Concerned</span></div>
                 </div>
                 <div class="network-avatar">👩</div>
                 <div class="network-name">Shory's Mom</div>
-            </a>
+            </div>
             
-            <a href="characters/mayor/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../mayor/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1994</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Cover-Up Artist</span></div>
                 </div>
                 <div class="network-avatar">🎩</div>
                 <div class="network-name">The Mayor</div>
-            </a>
+            </div>
             
-            <a href="characters/factory-foreman/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../factory-foreman/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">1987</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Whistleblower</span></div>
                 </div>
                 <div class="network-avatar">👷</div>
                 <div class="network-name">Factory Foreman</div>
-            </a>
+            </div>
             
-            <a href="characters/el-guero-mercury/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../el-guero-mercury/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Unclassified</span></div>
                 </div>
                 <div class="network-avatar">⚗️</div>
                 <div class="network-name">El Güero Mercury</div>
-            </a>
+            </div>
             
-            <a href="characters/van-owner/" class="network-card" style="text-decoration: none; color: inherit;">
+            <div class="network-card" onclick="navigateTo('../van-owner/')">
                 <div class="network-tooltip">
                     <div class="tooltip-row"><span class="tooltip-label">Last Seen:</span> <span class="tooltip-value">Unknown</span></div>
                     <div class="tooltip-row"><span class="tooltip-label">Threat:</span> <span class="tooltip-value">Mystery</span></div>
                 </div>
                 <div class="network-avatar">🚐</div>
                 <div class="network-name">Van Owner</div>
-            </a>
+            </div>
         </div>
     </div>
     
     <!-- FOOTER -->
     <div class="footer">
-        Character Profiles Compiled 2026 | Status: At Large | Last Confirmed: Unknown
+        Character Profile Compiled 2026 | Status: Active | Last Confirmed: Now
         <br>
-        El Shory talks. El Pecas listens. Together, they move through the borderlands like ghosts in a white van.
-        <br><br>
-        <span style="color: #555; font-size: 11px;">Explore the network. Follow the threads. Every name leads somewhere.</span>
+        <span style="color: #555; font-size: 11px; margin-top: 15px; display: block;">He doesn't say much. But when he does, you listen.</span>
     </div>
     
-
+    <script>
+        function navigateTo(path) {
+            window.location.href = path;
+        }
+    </script>
 </body>
 </html>
